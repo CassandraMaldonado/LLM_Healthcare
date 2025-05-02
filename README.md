@@ -45,3 +45,11 @@ _3. Evaluation_
 	•	PubMedQA: Accuracy, Exact Match, BERTScore
 	•	MedQA: MCQ diagnostic reasoning accuracy
 	•	Human-in-the-loop (optional): Clinician preference rankings
+
+## Tech Stack
+
+	•	LLM Framework: Hugging Face Transformers + TRL
+	•	Reinforcement Learning: PPO via TRL + custom reward functions
+	•	Models: LLaMA-medx_v3.2, BioGPT
+	•	Quantization: BitsAndBytes
+	•	Experiment Tracking: Weights & Biases
