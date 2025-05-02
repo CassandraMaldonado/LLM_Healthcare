@@ -24,12 +24,14 @@ This project addresses those limitations through clinically grounded reward desi
 ## Training Workflow
 
 _1. Supervised Fine-Tuning (SFT)_
+
 	•	Base model: LLaMA-medx or BioGPT
 	•	CoT-style prompts and long-form answer generation
 	•	Optimizer: AdamW, cosine decay scheduler
 	•	FP16 mixed precision for GPU efficiency
 
 _2. RLAIF: Reinforcement Learning with AI Feedback_
+
 	•	Custom reward function includes:
 	•	Use of diagnostic/clinical terminology
 	•	Chain-of-thought clarity and structure
@@ -39,6 +41,7 @@ _2. RLAIF: Reinforcement Learning with AI Feedback_
 	•	KL divergence penalty and reward normalization for training stability
 
 _3. Evaluation_
+
 	•	PubMedQA: Accuracy, Exact Match, BERTScore
 	•	MedQA: MCQ diagnostic reasoning accuracy
 	•	Human-in-the-loop (optional): Clinician preference rankings
