@@ -18,8 +18,7 @@ Diagnostic error remains one of the leading contributors to preventable harm in 
 	•	Shallow reasoning in generation
 	•	Misalignment with physician workflows and safety thresholds
 
-This project addresses those limitations through clinically grounded reward design, evidence-based evaluation, and transparent reasoning protocols.
-
+This project addresses those limitations through clinically grounded reward design, evidence-based evaluation and transparent reasoning protocols.
 
 ## Training Workflow
 
