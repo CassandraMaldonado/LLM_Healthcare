@@ -3,7 +3,7 @@ This project builds a medically specialized Large Language Model (LLM) tailored 
 
 Using validated QA datasets like PubMedQA, we optimize for factual accuracy, stepwise reasoning, and alignment with real-world clinician expectations.
 
-_Use case:_ In high-burden metro areas such as Chicago—representing ~3.5% of national healthcare expenditure—even modest reductions in diagnostic error could yield over $700M annually in savings and improved patient outcomes.
+_Use case:_ In high-burden metro areas such as Chicago, representing around 3.5% of national healthcare expenditure—even modest reductions in diagnostic error could yield over $700M annually in savings and improved patient outcomes.
 
 ## Objectives
 	•	Develop a clinically aligned, high-fidelity LLM for diagnostic support
