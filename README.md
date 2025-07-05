@@ -1,4 +1,4 @@
-# LLM_Healthcare
+# LLM for Healthcare
 This project builds a medically specialized Large Language Model (LLM) tailored for diagnostic decision support. By combining domain-specific supervised fine-tuning with Reinforcement Learning using AI Feedback (RLAIF), the model is trained to deliver clinically relevant, safe, and explainable responses to complex diagnostic queries.
 
 Using validated QA datasets like PubMedQA, we optimize for factual accuracy, stepwise reasoning, and alignment with real-world clinician expectations.
