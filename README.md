@@ -5,7 +5,7 @@ This repository contains work toward building a clinically optimized LLM designe
 
 ## Why This Matters
 
-Diagnostic errors remain one of the most expensive and preventable issues in healthcare, with over $20 billion lost annually in the U.S. due to misdiagnosis. Many general-purpose LLMs still struggle with clinical nuance—often generating incomplete, inaccurate, or unsafe recommendations. Our work aims to change that by combining:
+Diagnostic errors remain one of the most expensive and preventable issues in healthcare, with over $20 billion lost annually in the U.S. due to misdiagnosis. Many general purpose LLMs still struggle with clinical nuance, often generating incomplete, inaccurate or unsafe recommendations. Our work aims to change that by combining:
 	•	Fine-tuning on biomedical question-answering datasets
 	•	Model alignment techniques to reflect physician reasoning patterns
 	•	Evaluation against USMLE-style questions and real clinical use cases
