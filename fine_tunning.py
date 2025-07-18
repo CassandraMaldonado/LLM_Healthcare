@@ -1237,44 +1237,41 @@ def test_finetuned_model():
         print("2. Check if the path './small_model' exists.")
         print("3. Try loading with different parameters.")
 
-        # Try alternative loading approach
+        # Try the alternative loading approach.
         try:
-            print("\n🔄 Trying alternative loading method...")
+            print("\nTrying alternative loading method.")
             from peft import PeftModel
 
-            # Load base model and adapter
             base_model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-small")
             model = PeftModel.from_pretrained(base_model, "./small_model")
             tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-small")
 
-            print("✅ Alternative loading successful!")
+            print("Alternative loading successful.")
 
-            # Test with one prompt
+            # Test with one prompt.
             prompt = "What are the symptoms of diabetes?"
             inputs = tokenizer(prompt, return_tensors="pt")
             outputs = model.generate(**inputs, max_length=150, do_sample=True)
             response = tokenizer.decode(outputs[0], skip_special_tokens=True)
-            print(f"🤖 Response: {response}")
+            print(f"Response: {response}")
 
         except Exception as e2:
-            print(f"❌ Alternative loading also failed: {e2}")
+            print(f"Alternative loading also failed: {e2}")
 
 def simple_test():
-    """Simple test function that's more likely to work"""
     try:
-        # Load model
         tokenizer = AutoTokenizer.from_pretrained("./small_model")
         model = AutoModelForCausalLM.from_pretrained("./small_model")
 
-        # Simple test
+        # Simple test.
         prompt = "What are the symptoms of diabetes?"
         inputs = tokenizer.encode(prompt, return_tensors="pt")
 
-        # Generate with simple parameters
+        # Generate with simple parameters.
         outputs = model.generate(
             inputs,
-            max_length=inputs.shape[1] + 50,  # Add 50 tokens to input
-            do_sample=False,  # Greedy decoding
+            max_length=inputs.shape[1] + 50,
+            do_sample=False,
             pad_token_id=tokenizer.eos_token_id
         )
 
@@ -1286,24 +1283,23 @@ def simple_test():
         print(f"Error: {e}")
 
 def check_model_files():
-    """Check if model files exist"""
     import os
 
     model_path = "./small_model"
     if os.path.exists(model_path):
         files = os.listdir(model_path)
-        print(f"📁 Files in {model_path}:")
+        print(f"Files in {model_path}:")
         for file in files:
             print(f"  - {file}")
     else:
-        print(f"❌ Model path {model_path} does not exist")
+        print(f"Model path {model_path} does not exist.")
 
 # Run the tests
-print("🔍 Checking model files...")
+print("Checking model files.")
 check_model_files()
 
-print("\n🧪 Running simple test...")
+print("\nRunning simple test.")
 simple_test()
 
-print("\n🧪 Running comprehensive test...")
+print("\nRunning comprehensive test.")
 test_finetuned_model()
