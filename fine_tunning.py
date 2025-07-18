@@ -1165,25 +1165,25 @@ print("- Maximum compatibility mode available.")
 
 start_training_small_model()
 
-# Load and test your fine-tuned model with better error handling
+# Loading the fine-tuned model.
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 
 def test_finetuned_model():
     try:
-        print("🔄 Loading fine-tuned model...")
+        print("Loading fine-tuned model.")
 
-        # Load the fine-tuned model
+        # Load tokenizer and model.
         tokenizer = AutoTokenizer.from_pretrained("./small_model")
         model = AutoModelForCausalLM.from_pretrained("./small_model")
 
-        # Ensure pad token is set
+        # Check if tokenizer has pad token.
         if tokenizer.pad_token is None:
             tokenizer.pad_token = tokenizer.eos_token
 
-        print("✅ Model loaded successfully!")
+        print("Model loaded.")
 
-        # Test with medical queries
+        # Test with medical queries.
         test_prompts = [
             "What are the symptoms of diabetes?",
             "How is hypertension treated?",
@@ -1192,18 +1192,17 @@ def test_finetuned_model():
         ]
 
         print("\n" + "="*60)
-        print("🩺 TESTING FINE-TUNED MEDICAL MODEL")
+        print("Testing the fine-tuned medial model.")
         print("="*60)
 
         for i, prompt in enumerate(test_prompts, 1):
-            print(f"\n💬 Test {i}: {prompt}")
+            print(f"\n Test {i}: {prompt}")
             print("-" * 50)
 
             try:
-                # Tokenize input
                 inputs = tokenizer(prompt, return_tensors="pt", padding=True, truncation=True)
 
-                # Generate response
+                # Generating the response.
                 with torch.no_grad():
                     outputs = model.generate(
                         **inputs,
@@ -1216,27 +1215,27 @@ def test_finetuned_model():
                         eos_token_id=tokenizer.eos_token_id
                     )
 
-                # Decode response
+                # Decoding the response.
                 response = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
-                # Extract just the generated part (remove the prompt)
+                # Extracting the generated part.
                 if prompt in response:
                     generated_text = response[len(prompt):].strip()
                 else:
                     generated_text = response.strip()
 
-                print(f"🤖 Response: {generated_text}")
+                print(f"Response: {generated_text}")
 
             except Exception as e:
-                print(f"❌ Error generating response: {e}")
+                print(f"Error generating response: {e}")
                 continue
 
     except Exception as e:
-        print(f"❌ Error loading model: {e}")
-        print("\n🔧 Troubleshooting suggestions:")
-        print("1. Make sure the model was saved properly")
-        print("2. Check if the path './small_model' exists")
-        print("3. Try loading with different parameters")
+        print(f"Error loading model: {e}")
+        print("\n Troubleshooting suggestions:")
+        print("1. Make sure the model was saved correctly.")
+        print("2. Check if the path './small_model' exists.")
+        print("3. Try loading with different parameters.")
 
         # Try alternative loading approach
         try:
