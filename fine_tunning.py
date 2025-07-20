@@ -439,7 +439,7 @@ class ModelTrainer:
 
         # Last resort.
         if target_candidates:
-            print(f"⚠️ Using fallback target modules: {target_candidates[:3]}")
+            print(f"Using fallback target modules: {target_candidates[:3]}")
             return target_candidates[:3]
 
         # If all else fails, it returns empty list and let PEFT handle it
