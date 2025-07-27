@@ -8,12 +8,12 @@ We also experimented with Reinforcement Learning with AI Feedback (RLAIF) to bet
 ## Datasets
 Here’s what I used and why:
 
-🔬 PubMedQA
+_1. PubMedQA_
 Biomedical yes/no/maybe questions from research abstracts
 
 Great for evidence-based reasoning
 
-🦴 RadQA
+_2. RadQA_
 Radiology-focused QA with detailed rationales
 
 Used to fine-tune on chain-of-thought reasoning
