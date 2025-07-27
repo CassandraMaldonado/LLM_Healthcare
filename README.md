@@ -20,7 +20,7 @@ Used to fine-tune on chain-of-thought reasoning
 
 Really helpful for more step-by-step clinical logic
 
-📖 MedMCQA
+_3. MedMCQA_
 Massive MCQ dataset based on real medical exams (NEET-PG)
 
 Covers a wide range of specialties
