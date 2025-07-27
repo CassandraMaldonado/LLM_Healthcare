@@ -20,9 +20,9 @@ Massive MCQ dataset based on real medical exams, it covers a wide range of speci
 Each dataset had a slightly different format and use case, so combining them helped balance reasoning, recall and safety.
 
 ## Summary
-Most general-purpose LLMs aren't reliable enough for clinical use—they miss nuance, sometimes hallucinate, and lack medical context. So for this project, I:
+Most general LLMs aren't reliable enough for clinical use they miss nuance, sometimes hallucinate and lack medical context. So for this project, I:
 
-Fine-tuned a base model (LLaMA-style) using three healthcare-focused datasets
+- Fine-tuned a base model (LLaMA) using three healthcare datasets.
 
 Trained a reward model to score helpfulness/safety
 
