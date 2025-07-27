@@ -17,4 +17,4 @@ Radiology QA with detailed rationales, used to fine-tune on CoT reasoning. Reall
 _3. MedMCQA_: 
 Massive MCQ dataset based on real medical exams, it covers a wide range of specialties. Good for factual knowledge and memorization tasks.
 
-Each dataset had a slightly different format and use case, so combining them helped balance reasoning, recall, and safety.
+Each dataset had a slightly different format and use case, so combining them helped balance reasoning, recall and safety.
