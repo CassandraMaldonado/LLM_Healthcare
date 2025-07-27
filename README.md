@@ -24,7 +24,7 @@ Most general LLMs aren't reliable enough for clinical use they miss nuance, some
 
 - Fine-tuned a base model (LLaMA) using three healthcare datasets.
 
-Trained a reward model to score helpfulness/safety
+- Trained a reward model to score helpfulness and safety.
 
 Applied reinforcement learning to align responses with expert-like answers
 
