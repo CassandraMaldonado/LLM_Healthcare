@@ -8,23 +8,13 @@ We also experimented with Reinforcement Learning with AI Feedback (RLAIF) to bet
 ## Datasets
 Here’s what I used and why:
 
-_1. PubMedQA_
-Biomedical yes/no/maybe questions from research abstracts
+_1. PubMedQA_: 
+Biomedical yes/no/maybe questions from research abstracts, which makes it great for evidence reasoning.
 
-Great for evidence-based reasoning
+_2. RadQA_: 
+Radiology QA with detailed rationales, used to fine-tune on CoT reasoning. Really helpful for more step-by-step clinical logic.
 
-_2. RadQA_
-Radiology-focused QA with detailed rationales
-
-Used to fine-tune on chain-of-thought reasoning
-
-Really helpful for more step-by-step clinical logic
-
-_3. MedMCQA_
-Massive MCQ dataset based on real medical exams (NEET-PG)
-
-Covers a wide range of specialties
-
-Good for factual knowledge and memorization-heavy tasks
+_3. MedMCQA_: 
+Massive MCQ dataset based on real medical exams, it covers a wide range of specialties. Good for factual knowledge and memorization tasks.
 
 Each dataset had a slightly different format and use case, so combining them helped balance reasoning, recall, and safety.
