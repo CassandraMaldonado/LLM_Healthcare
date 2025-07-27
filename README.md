@@ -26,6 +26,6 @@ Most general LLMs aren't reliable enough for clinical use they miss nuance, some
 
 - Trained a reward model to score helpfulness and safety.
 
-Applied reinforcement learning to align responses with expert-like answers
+- Applied reinforcement learning to align responses with expert like answers.
 
-Evaluated the improvements across different medical QA formats
+- Evaluated the improvements across different medical QA formats.
