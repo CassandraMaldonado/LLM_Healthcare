@@ -1,9 +1,7 @@
 # Healthcare-Specialized LLM with Reinforcement Learning
 
 ## Overview
-This repo explores how to fine-tune a healthcare-specialized language model using medical datasets like PubMedQA, RadQA, and MedMCQA. The goal was to improve performance on tasks like medical question answering and clinical reasoning, especially in situations where accuracy and safety really matter.
-
-We also experimented with Reinforcement Learning with AI Feedback (RLAIF) to better align the model’s outputs with helpful, factual, and medically sound answers.
+This project fine-tunes a clinically aligned biomedical LLM using gold-standard datasets like PubMedQA, optimized for factual correctness, diagnostic safety, and clinical utility. Leveraging Reinforcement Learning with AI Feedback (RLAIF) and multi-step processing, this pipeline transforms medical question-answer datasets into instruction-following format and tunes LLMs such as BioGPT or LLaMA-3 OpenBioLLM for deployment in real-world healthcare workflows.
 
 ## Datasets
 Here’s what I used and why:
