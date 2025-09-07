@@ -35,7 +35,7 @@ The fine-tuning process is organized into stages:
 
 - Stage 1 PubMedQA: Trains the model on biomedical reasoning.
 
-Stage 2 MedMCQA: Strengthens factual recall across specialties.
+- Stage 2 MedMCQA: Strengthens factual recall across specialties.
 
 Stage 3 (MedQA): Consolidates comprehensive medical reasoning.
 
