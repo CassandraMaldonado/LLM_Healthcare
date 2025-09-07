@@ -1,7 +1,9 @@
 # Healthcare-Specialized LLM with Reinforcement Learning
 
 ## Overview
-This project fine-tunes a clinically aligned biomedical LLM using gold-standard datasets like PubMedQA, optimized for factual correctness, diagnostic safety, and clinical utility. Leveraging Reinforcement Learning with AI Feedback (RLAIF) and multi-step processing, this pipeline transforms medical question-answer datasets into instruction-following format and tunes LLMs such as BioGPT or LLaMA-3 OpenBioLLM for deployment in real-world healthcare workflows.
+This project focuses on fine-tuning a biomedical LLM for clinical question answering. The main goal is to improve factual accuracy, diagnostic reasoning, and clinical safety by training on high-quality medical datasets.
+
+The pipeline uses multi-stage fine-tuning with LoRA adapters and 8-bit quantization, making it efficient to run while still effective for healthcare-related tasks.
 
 ## Datasets
 Here’s what I used and why:
