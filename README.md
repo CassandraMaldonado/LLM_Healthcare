@@ -29,6 +29,26 @@ Each dataset contributes something different to the training:
 
 Combining these datasets helps balance reasoning, recall, and safety in the final model.
 
+## Training Pipeline
+
+The fine-tuning process is organized into stages:
+
+Stage 1 PubMedQA: Trains the model on biomedical reasoning.
+
+Stage 2 (MedMCQA): Strengthens factual recall across specialties.
+
+Stage 3 (MedQA): Consolidates comprehensive medical reasoning.
+
+Technical details:
+
+LoRA adapters for parameter-efficient fine-tuning.
+
+8-bit quantization to reduce memory usage.
+
+Instruction formatting to convert QA datasets into instruction-following style.
+
+W&B logging to monitor training progress and metrics.
+
 ## Summary
 Most general LLMs aren't reliable enough for clinical use they miss nuance, sometimes hallucinate and lack medical context. So for this project, I:
 
