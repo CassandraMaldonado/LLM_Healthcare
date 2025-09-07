@@ -5,6 +5,18 @@ This project focuses on fine-tuning a biomedical LLM for clinical question answe
 
 The pipeline uses multi-stage fine-tuning with LoRA adapters and 8-bit quantization, making it efficient to run while still effective for healthcare-related tasks.
 
+## Motivation
+
+General-purpose LLMs often struggle in clinical settings because they:
+
+Miss medical nuance,
+
+Sometimes hallucinate answers, and
+
+Lack domain-specific context.
+
+By using domain-specific datasets and reinforcement alignment techniques, this project aims to train models that provide safer and more reliable medical responses.
+
 ## Datasets
 Here’s what I used and why:
 
