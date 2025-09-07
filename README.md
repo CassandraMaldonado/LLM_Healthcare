@@ -37,7 +37,7 @@ The fine-tuning process is organized into stages:
 
 - Stage 2 MedMCQA: Strengthens factual recall across specialties.
 
-Stage 3 (MedQA): Consolidates comprehensive medical reasoning.
+- Stage 3 MedQA: Consolidates comprehensive medical reasoning.
 
 Technical details:
 
