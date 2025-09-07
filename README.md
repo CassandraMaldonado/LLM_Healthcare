@@ -18,18 +18,16 @@ General-purpose LLMs often struggle in clinical settings because they:
 By using domain-specific datasets and reinforcement alignment techniques, this project aims to train models that provide safer and more reliable medical responses.
 
 ## Datasets
-Here’s what I used and why:
 
-_1. PubMedQA_: 
-Biomedical yes/no/maybe questions from research abstracts, which makes it great for evidence reasoning.
+Each dataset contributes something different to the training:
 
-_2. RadQA_: 
-Radiology QA with detailed rationales, used to fine-tune on CoT reasoning. Really helpful for more step-by-step clinical logic.
+PubMedQA – Biomedical yes/no/maybe questions from PubMed abstracts. Good for evidence-based reasoning.
 
-_3. MedMCQA_: 
-Massive MCQ dataset based on real medical exams, it covers a wide range of specialties. Good for factual knowledge and memorization tasks.
+RadQA – Radiology QA with detailed rationales. Helps the model learn step-by-step (chain-of-thought) clinical logic.
 
-Each dataset had a slightly different format and use case, so combining them helped balance reasoning, recall and safety.
+MedMCQA – A large multiple-choice dataset based on medical exams. Useful for memorization and broad factual knowledge.
+
+Combining these datasets helps balance reasoning, recall, and safety in the final model.
 
 ## Summary
 Most general LLMs aren't reliable enough for clinical use they miss nuance, sometimes hallucinate and lack medical context. So for this project, I:
