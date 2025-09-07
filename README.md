@@ -9,11 +9,11 @@ The pipeline uses multi-stage fine-tuning with LoRA adapters and 8-bit quantizat
 
 General-purpose LLMs often struggle in clinical settings because they:
 
-Miss medical nuance,
+- Miss medical nuance.
 
-Sometimes hallucinate answers, and
+- Sometimes hallucinate answers.
 
-Lack domain-specific context.
+- Lack domain-specific context.
 
 By using domain-specific datasets and reinforcement alignment techniques, this project aims to train models that provide safer and more reliable medical responses.
 
