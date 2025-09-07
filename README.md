@@ -21,7 +21,7 @@ By using domain-specific datasets and reinforcement alignment techniques, this p
 
 Each dataset contributes something different to the training:
 
-PubMedQA – Biomedical yes/no/maybe questions from PubMed abstracts. Good for evidence-based reasoning.
+1. PubMedQA: Biomedical yes/no/maybe questions from PubMed abstracts. Good for evidence-based reasoning.
 
 RadQA – Radiology QA with detailed rationales. Helps the model learn step-by-step (chain-of-thought) clinical logic.
 
