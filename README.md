@@ -25,7 +25,7 @@ Each dataset contributes something different to the training:
 
 2. RadQA: Radiology QA with detailed rationales. Helps the model learn step-by-step (chain-of-thought) clinical logic.
 
-MedMCQA – A large multiple-choice dataset based on medical exams. Useful for memorization and broad factual knowledge.
+3. MedMCQA: A large multiple-choice dataset based on medical exams. Useful for memorization and broad factual knowledge.
 
 Combining these datasets helps balance reasoning, recall, and safety in the final model.
 
