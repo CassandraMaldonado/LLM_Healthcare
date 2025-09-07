@@ -33,13 +33,13 @@ Combining these datasets helps balance reasoning, recall, and safety in the fina
 
 The fine-tuning process is organized into stages:
 
-- Stage 1 PubMedQA: Trains the model on biomedical reasoning.
+1. Stage 1 PubMedQA: Trains the model on biomedical reasoning.
 
-- Stage 2 MedMCQA: Strengthens factual recall across specialties.
+2. Stage 2 MedMCQA: Strengthens factual recall across specialties.
 
-- Stage 3 MedQA: Consolidates comprehensive medical reasoning.
+3. Stage 3 MedQA: Consolidates comprehensive medical reasoning.
 
-Technical details:
+_Technical details:_
 
 LoRA adapters for parameter-efficient fine-tuning.
 
