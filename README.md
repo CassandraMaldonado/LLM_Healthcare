@@ -41,7 +41,7 @@ The fine-tuning process is organized into stages:
 
 _Technical details:_
 
-LoRA adapters for parameter-efficient fine-tuning.
+- LoRA adapters for parameter-efficient fine-tuning.
 
 8-bit quantization to reduce memory usage.
 
