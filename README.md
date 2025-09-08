@@ -47,7 +47,7 @@ _Technical details:_
 
 - Instruction formatting to convert QA datasets into instruction-following style.
 
-W&B logging to monitor training progress and metrics.
+- W&B logging to monitor training progress and metrics.
 
 ## Summary
 Most general LLMs aren't reliable enough for clinical use they miss nuance, sometimes hallucinate and lack medical context. So for this project, I:
