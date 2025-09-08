@@ -43,9 +43,9 @@ _Technical details:_
 
 - LoRA adapters for parameter-efficient fine-tuning.
 
-8-bit quantization to reduce memory usage.
+- 8-bit quantization to reduce memory usage.
 
-Instruction formatting to convert QA datasets into instruction-following style.
+- Instruction formatting to convert QA datasets into instruction-following style.
 
 W&B logging to monitor training progress and metrics.
 
