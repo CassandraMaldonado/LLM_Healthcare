@@ -7,15 +7,7 @@ The training pipeline uses multi-stage curriculum fine-tuning with LoRA adapters
 
 ## Motivation
 
-General-purpose LLMs often struggle in clinical settings because they:
-
-- Miss medical nuance.
-
-- Sometimes hallucinate answers.
-
-- Lack domain-specific context.
-
-By using domain-specific datasets and reinforcement alignment techniques, this project aims to train models that provide safer and more reliable medical responses.
+Most general LLMs struggle in biomedical contexts: they hallucinate, miss subtle clinical cues, and don’t generalize well to exam-style or radiology reasoning tasks. To address this, I fine-tuned an open-source LLM using carefully selected medical datasets, aligning the model step by step with expert-like reasoning and safe clinical behavior.
 
 ## Datasets
 
