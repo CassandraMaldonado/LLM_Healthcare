@@ -21,6 +21,27 @@ Each dataset contributes something different to the training:
 
 Combining these datasets helps balance reasoning, recall, and safety in the final model.
 
+## Fine-Tuning Process
+
+The fine-tuning pipeline is implemented in finetune_multistep.py
+. The process follows a curriculum-style setup:
+
+Instruction Formatting – Converted QA datasets into an instruction–response format so the model learns to follow prompts directly.
+
+Stage-Wise Training –
+
+Stage 1: Fine-tune on PubMedQA for evidence reasoning.
+
+Stage 2: Fine-tune on MedMCQA for factual recall.
+
+Stage 3: Fine-tune on MedQA for comprehensive clinical reasoning.
+
+LoRA Adapters – Used for parameter-efficient fine-tuning, training only a fraction of model weights.
+
+Quantization – Trained with 8-bit precision to reduce GPU memory usage and make large models trainable on more modest hardware.
+
+Experiment Tracking – Integrated with Weights & Biases (W&B) for logging losses, evaluation metrics, and checkpoints.
+
 ## Training Pipeline
 
 The fine-tuning process is organized into stages:
