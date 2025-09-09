@@ -1,9 +1,9 @@
 # Healthcare-Specialized LLM with Reinforcement Learning
 
 ## Overview
-This project focuses on fine-tuning a biomedical LLM for clinical question answering. The main goal is to improve factual accuracy, diagnostic reasoning, and clinical safety by training on high-quality medical datasets.
+This project fine-tunes a biomedical large language model (LLM) for clinical question answering. The goal is to improve factual correctness, diagnostic reasoning, and safety in responses, making the model more suitable for use in healthcare settings.
 
-The pipeline uses multi-stage fine-tuning with LoRA adapters and 8-bit quantization, making it efficient to run while still effective for healthcare-related tasks.
+The training pipeline uses multi-stage curriculum fine-tuning with LoRA adapters and 8-bit quantization, which allows large models to be trained efficiently while maintaining strong performance.
 
 ## Motivation
 
