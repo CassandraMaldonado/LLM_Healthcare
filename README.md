@@ -23,9 +23,9 @@ Combining these datasets helps balance reasoning, recall, and safety in the fina
 
 ## Fine-Tuning Process
 
-The fine-tuning pipeline is implemented in 'finetune_multistep.py' The process follows a curriculum-style setup:
+The fine-tuning pipeline is implemented in 'finetune_multistep.py'. The process follows a curriculum-style setup:
 
-Instruction Formatting – Converted QA datasets into an instruction–response format so the model learns to follow prompts directly.
+1. Instruction Formatting – Converted QA datasets into an instruction–response format so the model learns to follow prompts directly.
 
 Stage-Wise Training –
 
