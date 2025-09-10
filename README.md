@@ -27,7 +27,7 @@ The fine-tuning pipeline is implemented in 'finetune_multistep.py'. The process 
 
 **1. Instruction Formatting:** Converted QA datasets into an instruction–response format so the model learns to follow prompts directly.
 
-Stage-Wise Training –
+**2. Stage-Wise Training:**
 
 Stage 1: Fine-tune on PubMedQA for evidence reasoning.
 
