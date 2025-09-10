@@ -29,11 +29,11 @@ The fine-tuning pipeline is implemented in 'finetune_multistep.py'. The process 
 
 **2. Stage-Wise Training:**
 
-Stage 1: Fine-tune on PubMedQA for evidence reasoning.
+- _Stage 1:_ Fine-tune on PubMedQA for evidence reasoning.
 
-Stage 2: Fine-tune on MedMCQA for factual recall.
+- _Stage 2:_ Fine-tune on MedMCQA for factual recall.
 
-Stage 3: Fine-tune on MedQA for comprehensive clinical reasoning.
+- _Stage 3:_ Fine-tune on MedQA for comprehensive clinical reasoning.
 
 LoRA Adapters – Used for parameter-efficient fine-tuning, training only a fraction of model weights.
 
