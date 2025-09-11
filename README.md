@@ -39,7 +39,7 @@ The fine-tuning pipeline is implemented in 'finetune_multistep.py'. The process 
 
 **4. Quantization:** Trained with 8-bit precision to reduce GPU memory usage and make large models trainable on more modest hardware.
 
-**4.Experiment Tracking** Integrated with Weights & Biases (W&B) for logging losses, evaluation metrics, and checkpoints.
+**5.Experiment Tracking:** Integrated with W&B for logging losses, evaluation metrics and checkpoints.
 
 ## Training Pipeline
 
