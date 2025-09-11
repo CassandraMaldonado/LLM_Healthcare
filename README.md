@@ -35,7 +35,7 @@ The fine-tuning pipeline is implemented in 'finetune_multistep.py'. The process 
 
 - _Stage 3:_ Fine-tune on MedQA for comprehensive clinical reasoning.
 
-LoRA Adapters – Used for parameter-efficient fine-tuning, training only a fraction of model weights.
+**3. LoRA Adapters** – Used for parameter-efficient fine-tuning, training only a fraction of model weights.
 
 Quantization – Trained with 8-bit precision to reduce GPU memory usage and make large models trainable on more modest hardware.
 
