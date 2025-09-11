@@ -41,26 +41,6 @@ The fine-tuning pipeline is implemented in 'finetune_multistep.py'. The process 
 
 **5.Experiment Tracking:** Integrated with W&B for logging losses, evaluation metrics and checkpoints.
 
-## Training Pipeline
-
-The fine-tuning process is organized into stages:
-
-1. Stage 1 PubMedQA: Trains the model on biomedical reasoning.
-
-2. Stage 2 MedMCQA: Strengthens factual recall across specialties.
-
-3. Stage 3 MedQA: Consolidates comprehensive medical reasoning.
-
-_Technical details:_
-
-- LoRA adapters for parameter-efficient fine-tuning.
-
-- 8-bit quantization to reduce memory usage.
-
-- Instruction formatting to convert QA datasets into instruction-following style.
-
-- W&B logging to monitor training progress and metrics.
-
 ## Summary
 Most general LLMs aren't reliable enough for clinical use they miss nuance, sometimes hallucinate and lack medical context. So for this project, I:
 
