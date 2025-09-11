@@ -41,6 +41,24 @@ The fine-tuning pipeline is implemented in 'finetune_multistep.py'. The process 
 
 **5.Experiment Tracking:** Integrated with W&B for logging losses, evaluation metrics and checkpoints.
 
+Evaluation
+
+To measure improvements, I evaluated the fine-tuned model across different QA formats:
+
+Accuracy on MedMCQA (factual exam-style questions).
+
+Reasoning Quality on RadQA (step-by-step CoT explanations).
+
+Consistency on PubMedQA (yes/no/maybe biomedical evidence questions).
+
+In addition, I monitored:
+
+Hallucination rate – fewer unsupported claims after fine-tuning.
+
+Safety alignment – responses scored for clinical appropriateness using a reward model.
+
+Comparisons to baseline – fine-tuned model vs. base model performance.
+
 ## Summary
 Most general LLMs aren't reliable enough for clinical use they miss nuance, sometimes hallucinate and lack medical context. So for this project, I:
 
