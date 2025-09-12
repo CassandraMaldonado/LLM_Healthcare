@@ -49,7 +49,7 @@ To measure improvements, I evaluated the fine-tuned model across different QA fo
 
 - Reasoning Quality on RadQA (step-by-step CoT explanations).
 
-Consistency on PubMedQA (yes/no/maybe biomedical evidence questions).
+- Consistency on PubMedQA (yes/no/maybe biomedical evidence questions).
 
 In addition, I monitored:
 
