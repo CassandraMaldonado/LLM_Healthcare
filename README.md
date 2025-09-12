@@ -53,9 +53,9 @@ To measure improvements, I evaluated the fine-tuned model across different QA fo
 
 In addition, I monitored:
 
-Hallucination rate – fewer unsupported claims after fine-tuning.
+- **Hallucination rate:** fewer unsupported claims after fine-tuning.
 
-Safety alignment – responses scored for clinical appropriateness using a reward model.
+- Safety alignment – responses scored for clinical appropriateness using a reward model.
 
 Comparisons to baseline – fine-tuned model vs. base model performance.
 
