@@ -45,9 +45,9 @@ The fine-tuning pipeline is implemented in 'finetune_multistep.py'. The process 
 
 To measure improvements, I evaluated the fine-tuned model across different QA formats:
 
-Accuracy on MedMCQA (factual exam-style questions).
+- Accuracy on MedMCQA (factual exam-style questions).
 
-Reasoning Quality on RadQA (step-by-step CoT explanations).
+- Reasoning Quality on RadQA (step-by-step CoT explanations).
 
 Consistency on PubMedQA (yes/no/maybe biomedical evidence questions).
 
