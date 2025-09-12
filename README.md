@@ -57,7 +57,7 @@ In addition, I monitored:
 
 - **Safety alignment:** responses scored for clinical appropriateness using a reward model.
 
-- **Comparisons to baseline** – fine-tuned model vs. base model performance.
+- **Comparisons to baseline:** fine-tuned model vs. base model performance.
 
 ## Summary
 Most general LLMs aren't reliable enough for clinical use they miss nuance, sometimes hallucinate and lack medical context. So for this project, I:
