@@ -6,7 +6,6 @@ This project fine-tunes a biomedical large language model (LLM) for clinical que
 The training pipeline uses multi-stage curriculum fine-tuning with LoRA adapters and 8-bit quantization, which allows large models to be trained efficiently while maintaining strong performance.
 
 ## Motivation
----
 
 Most general LLMs struggle in biomedical contexts: they hallucinate, miss subtle clinical cues, and don’t generalize well to exam-style or radiology reasoning tasks. To address this, I fine-tuned an open-source LLM using carefully selected medical datasets, aligning the model step by step with expert-like reasoning and safe clinical behavior.
 
