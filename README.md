@@ -1,5 +1,7 @@
 # Healthcare-Specialized LLM with Reinforcement Learning
 
+-------
+
 ## Overview
 This project fine-tunes a biomedical large language model (LLM) for clinical question answering. The goal is to improve factual correctness, diagnostic reasoning, and safety in responses, making the model more suitable for use in healthcare settings.
 
