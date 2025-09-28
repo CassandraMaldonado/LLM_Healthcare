@@ -72,7 +72,7 @@ Includes:
 
 - Loading the model with quantization (8-bit/4-bit support).
 
-Applying LoRA adapters for parameter-efficient tuning.
+- Applying LoRA adapters for parameter-efficient tuning.
 
 Step-by-step fine-tuning with curriculum datasets (PubMedQA, RadQA, MedMCQA).
 
