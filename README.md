@@ -70,7 +70,7 @@ A full fine-tuning workflow on the 13B parameter LLaMA model.
 
 Includes:
 
-Loading the model with quantization (8-bit/4-bit support).
+- Loading the model with quantization (8-bit/4-bit support).
 
 Applying LoRA adapters for parameter-efficient tuning.
 
