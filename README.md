@@ -87,7 +87,7 @@ Useful for:
 
 - Verifying dataset formatting and instruction templates.
 
-Quick inference tests before scaling to larger models.
+- Quick inference tests before scaling to larger models.
 
 Together, these notebooks let you iterate quickly at 7B scale and then scale up experiments at 13B with more comprehensive training.
 
