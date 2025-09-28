@@ -60,6 +60,34 @@ In addition, I monitored:
 
 - **Comparisons to baseline:** fine-tuned model vs. base model performance.
 
+## Notebooks
+
+This repository also contains interactive Jupyter notebooks for experimentation and testing:
+
+LLama_13b.ipynb
+A full fine-tuning workflow on the 13B parameter LLaMA model.
+Includes:
+
+Loading the model with quantization (8-bit/4-bit support).
+
+Applying LoRA adapters for parameter-efficient tuning.
+
+Step-by-step fine-tuning with curriculum datasets (PubMedQA, RadQA, MedMCQA).
+
+Evaluation metrics logging and sample generations.
+
+Testing_llama7b.ipynb
+A lightweight playground using the 7B parameter model.
+Useful for:
+
+Rapid prototyping on smaller hardware.
+
+Verifying dataset formatting and instruction templates.
+
+Quick inference tests before scaling to larger models.
+
+Together, these notebooks let you iterate quickly at 7B scale and then scale up experiments at 13B with more comprehensive training.
+
 ## Summary
 Most general LLMs aren't reliable enough for clinical use they miss nuance, sometimes hallucinate and lack medical context. So for this project, I:
 
