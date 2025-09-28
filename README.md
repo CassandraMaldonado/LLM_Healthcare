@@ -80,9 +80,10 @@ Includes:
 
 Testing_llama7b.ipynb
 A lightweight playground using the 7B parameter model.
+
 Useful for:
 
-Rapid prototyping on smaller hardware.
+- Rapid prototyping on smaller hardware.
 
 Verifying dataset formatting and instruction templates.
 
