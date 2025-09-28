@@ -65,7 +65,9 @@ In addition, I monitored:
 This repository also contains interactive Jupyter notebooks for experimentation and testing:
 
 LLama_13b.ipynb
+
 A full fine-tuning workflow on the 13B parameter LLaMA model.
+
 Includes:
 
 Loading the model with quantization (8-bit/4-bit support).
