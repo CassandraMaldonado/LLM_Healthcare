@@ -76,7 +76,7 @@ Includes:
 
 - Step-by-step fine-tuning with curriculum datasets (PubMedQA, RadQA, MedMCQA).
 
-Evaluation metrics logging and sample generations.
+- Evaluation metrics logging and sample generations.
 
 Testing_llama7b.ipynb
 A lightweight playground using the 7B parameter model.
