@@ -85,7 +85,7 @@ Useful for:
 
 - Rapid prototyping on smaller hardware.
 
-Verifying dataset formatting and instruction templates.
+- Verifying dataset formatting and instruction templates.
 
 Quick inference tests before scaling to larger models.
 
