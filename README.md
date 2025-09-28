@@ -74,7 +74,7 @@ Includes:
 
 - Applying LoRA adapters for parameter-efficient tuning.
 
-Step-by-step fine-tuning with curriculum datasets (PubMedQA, RadQA, MedMCQA).
+- Step-by-step fine-tuning with curriculum datasets (PubMedQA, RadQA, MedMCQA).
 
 Evaluation metrics logging and sample generations.
 
