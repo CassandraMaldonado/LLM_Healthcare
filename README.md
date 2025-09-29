@@ -73,11 +73,11 @@ It covers:
 
 2. Attaching LoRA adapters to the model, freezing base weights.
 
-Sequential fine-tuning stages (PubMedQA, RadQA, MedMCQA) with intermediate checkpointing.
+3. Sequential fine-tuning stages (PubMedQA, RadQA, MedMCQA) with intermediate checkpointing.
 
-Running evaluations after each stage (accuracy, reasoning, safety metrics).
+4. Running evaluations after each stage (accuracy, reasoning, safety metrics).
 
-Sampling and comparing model outputs across prompts to monitor hallucination or alignment issues.
+5. Sampling and comparing model outputs across prompts to monitor hallucination or alignment issues.
 
 Testing_llama7b.ipynb
 A quicker, lighter alternative using the 7B-parameter model.
