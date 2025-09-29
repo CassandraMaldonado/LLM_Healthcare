@@ -60,9 +60,10 @@ In addition, I monitored:
 
 - **Comparisons to baseline:** fine-tuned model vs. base model performance.
 
-## Notebooks
+## Notebooks (in Gpt-oss/)
 
-This repository also contains interactive Jupyter notebooks for experimentation and testing:
+These notebooks provide runnable workflows to explore and test the models interactively. They complement the production scripts by giving you a more hands-on way to understand and validate each training stage.
+
 
 LLama_13b.ipynb
 
