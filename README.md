@@ -64,13 +64,14 @@ In addition, I monitored:
 
 These notebooks provide runnable workflows to explore and test the models interactively. They complement the production scripts by giving you a more hands-on way to understand and validate each training stage.
 
-LLama_13b.ipynb
+- LLama_13b.ipynb
+- 
 A comprehensive fine-tuning walkthrough for the 13B-parameter LLaMA model.
 It covers:
 
-Loading a quantized version of the 13B model (8-bit or 4-bit modes).
+1. Loading a quantized version of the 13B model (8-bit or 4-bit modes).
 
-Attaching LoRA adapters to the model, freezing base weights.
+2. Attaching LoRA adapters to the model, freezing base weights.
 
 Sequential fine-tuning stages (PubMedQA, RadQA, MedMCQA) with intermediate checkpointing.
 
