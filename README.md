@@ -79,7 +79,7 @@ It covers:
 
 5. Sampling and comparing model outputs across prompts to monitor hallucination or alignment issues.
 
-Testing_llama7b.ipynb
+- **Testing_llama7b.ipynb**
 
 A quicker, lighter alternative using the 7B-parameter model.
 Use cases include:
