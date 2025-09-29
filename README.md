@@ -64,7 +64,7 @@ In addition, I monitored:
 
 These notebooks provide runnable workflows to explore and test the models interactively. They complement the production scripts by giving you a more hands-on way to understand and validate each training stage.
 
-- LLama_13b.ipynb
+- **LLama_13b.ipynb**
   
 A comprehensive fine-tuning walkthrough for the 13B-parameter LLaMA model.
 It covers:
