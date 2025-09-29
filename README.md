@@ -64,33 +64,29 @@ In addition, I monitored:
 
 These notebooks provide runnable workflows to explore and test the models interactively. They complement the production scripts by giving you a more hands-on way to understand and validate each training stage.
 
-
 LLama_13b.ipynb
+A comprehensive fine-tuning walkthrough for the 13B-parameter LLaMA model.
+It covers:
 
-A full fine-tuning workflow on the 13B parameter LLaMA model.
+Loading a quantized version of the 13B model (8-bit or 4-bit modes).
 
-Includes:
+Attaching LoRA adapters to the model, freezing base weights.
 
-- Loading the model with quantization (8-bit/4-bit support).
+Sequential fine-tuning stages (PubMedQA, RadQA, MedMCQA) with intermediate checkpointing.
 
-- Applying LoRA adapters for parameter-efficient tuning.
+Running evaluations after each stage (accuracy, reasoning, safety metrics).
 
-- Step-by-step fine-tuning with curriculum datasets (PubMedQA, RadQA, MedMCQA).
-
-- Evaluation metrics logging and sample generations.
+Sampling and comparing model outputs across prompts to monitor hallucination or alignment issues.
 
 Testing_llama7b.ipynb
-A lightweight playground using the 7B parameter model.
+A quicker, lighter alternative using the 7B-parameter model.
+Use cases include:
 
-Useful for:
+Validating data formatting (prompt/response structure, tokenization) quickly.
 
-- Rapid prototyping on smaller hardware.
+Iterating prompt templates and instruction tuning before scaling to 13B.
 
-- Verifying dataset formatting and instruction templates.
-
-- Quick inference tests before scaling to larger models.
-
-Together, these notebooks let you iterate quickly at 7B scale and then scale up experiments at 13B with more comprehensive training.
+Running small-scale inference and sanity checks on hardware that can’t handle the full 13B workflow.
 
 ## Summary
 Most general LLMs aren't reliable enough for clinical use they miss nuance, sometimes hallucinate and lack medical context. So for this project, I:
