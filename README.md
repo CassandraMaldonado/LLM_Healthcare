@@ -60,7 +60,7 @@ In addition, I monitored:
 
 - **Comparisons to baseline:** fine-tuned model vs. base model performance.
 
-## Notebooks (in Gpt-oss/)
+## Notebooks (in Gpt-oss)
 
 These notebooks provide runnable workflows to explore and test the models interactively. They complement the production scripts by giving you a more hands-on way to understand and validate each training stage.
 
