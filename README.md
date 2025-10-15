@@ -10,7 +10,7 @@ Instead of training one big model, we’re running smaller, controlled tests usi
 
 Large language models often struggle with medical content they can hallucinate, miss important details or make unsafe recommendations. Since training big models takes a lot of compute power, our plan is to first test smaller models and methods to find out which tuning approach works best for healthcare question answering.
 
-Experiments
+## Experiments
 
 Each experiment uses the same small base model (like LLaMA or GPT-OSS) and a consistent 50-example dataset for fair comparison.
 
