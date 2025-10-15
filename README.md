@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project explores three small experiments to see how different model-tuning methods perform on medical question answering tasks. The goal is to compare fine-tuning, ICL and DPO using a small dataset and see which approach gives the best balance between accuracy, reasoning quality, and safety.
+This project explores three small experiments to see how different model-tuning methods perform on medical question answering tasks. The goal is to compare fine-tuning, ICL and DPO using a small subset of each of the datasets and see which approach gives the best balance between accuracy, reasoning quality and safety.
 
 Instead of training one big model, we’re running smaller, controlled tests using about 50 examples per method. The results will help us decide which strategy is most effective before scaling up for larger experiments in collaboration with Inference Analytics.
 
