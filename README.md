@@ -8,7 +8,7 @@ Instead of training one big model, we’re running smaller, controlled tests usi
 
 ## Motivation
 
-Large language models often struggle with medical content they can hallucinate, miss important details or make unsafe recommendations. Since training big models takes a lot of compute power, our plan is to first test smaller models and methods to find out which tuning approach works best for healthcare question answering.
+General LLMs often struggle with biomedical content they sometimes hallucinate, overlook key clinical details or produce unsafe advice. Because training big models requires significant compute power, we’re starting small to figure out which method of tuning LLaMA 3.1 is most effective for healthcare tasks.
 
 ## Experiments
 
