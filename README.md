@@ -10,6 +10,22 @@ Instead of training one big model, we’re running smaller, controlled tests usi
 
 Large language models often struggle with medical content they can hallucinate, miss important details or make unsafe recommendations. Since training big models takes a lot of compute power, our plan is to first test smaller models and methods to find out which tuning approach works best for healthcare question answering.
 
+Experiments
+
+Each experiment uses the same small base model (like LLaMA or GPT-OSS) and a consistent 50-example dataset for fair comparison.
+
+1. Fine-Tuning
+
+We train the model using supervised fine-tuning (SFT) with LoRA adapters. Only a small set of parameters is updated, which saves memory and training time. This helps the model learn directly from labeled question–answer pairs.
+
+2. In-Context Learning (ICL)
+
+In this setup, we don’t train the model at all — we just show it examples directly in the prompt and see how well it generalizes. This test helps us understand how much the model can learn “on the fly” from context alone.
+
+3. Direct Preference Optimization (DPO)
+
+This experiment teaches the model to prefer better-quality answers. We use pairs of responses — one preferred, one not — so the model learns what kind of reasoning and tone are most clinically appropriate.
+
 ## Datasets
 
 Each dataset contributes something different to the training:
