@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project explores three small experiments to compare different ways of adapting LLaMA 3.1 for medical question answering. The goal is to test and compare fine-tuning, ICL and DPO using a small sample of medical data to see which approach gives the best balance between accuracy, reasoning quality, and safety.
+This project explores three small experiments to compare different ways of adapting LLaMA 3.1 for medical question answering. The goal is to test and compare fine-tuning, ICL and DPO using a small sample of medical data to see which approach gives the best balance between accuracy, reasoning quality and safety.
 
 Instead of training one big model, we’re running smaller, controlled tests using about 100 examples per method. The results will help us decide which strategy is most effective before scaling up for larger experiments.
 
