@@ -2,9 +2,9 @@
 
 ## Overview
 
-This project fine-tunes a biomedical large language model (LLM) for clinical question answering. The goal is to improve factual correctness, diagnostic reasoning, and safety in responses, making the model more suitable for use in healthcare settings.
+This project explores three small experiments to see how different model-tuning methods perform on medical question answering tasks. The goal is to compare fine-tuning, in-context learning (ICL), and direct preference optimization (DPO) using a small dataset and see which approach gives the best balance between accuracy, reasoning quality, and safety.
 
-The training pipeline uses multi-stage curriculum fine-tuning with LoRA adapters and 8-bit quantization, which allows large models to be trained efficiently while maintaining strong performance.
+Instead of training one big model, we’re running smaller, controlled tests using about 50 examples per method. The results will help us decide which strategy is most effective before scaling up for larger experiments in collaboration with Inference Analytics.
 
 ## Motivation
 
