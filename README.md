@@ -20,7 +20,7 @@ We fine-tune LLaMA 3.1 using supervised fine-tuning (SFT) with LoRA adapters. Th
 
 ***2. In-Context Learning (ICL)***
 
-In this setup, we don’t train the model at all — we just show it examples directly in the prompt and see how well it generalizes. This test helps us understand how much the model can learn “on the fly” from context alone.
+In this setup, the model isn’t trained, it just sees examples directly in the prompt. This tests how well LLaMA 3.1 can learn patterns and reasoning styles from context alone, without updating its weights. 
 
 3. Direct Preference Optimization (DPO)
 
