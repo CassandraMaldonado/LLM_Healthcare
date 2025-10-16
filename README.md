@@ -14,9 +14,9 @@ General LLMs often struggle with biomedical content they sometimes hallucinate, 
 
 Each experiment uses the same LLaMA 3.1 base model and a consistent set of 100 medical question–answer pairs for fair comparison.
 
-1. Fine-Tuning
+***1. Fine-Tuning***
 
-We train the model using supervised fine-tuning (SFT) with LoRA adapters. Only a small set of parameters is updated, which saves memory and training time. This helps the model learn directly from labeled question–answer pairs.
+We fine-tune LLaMA 3.1 using supervised fine-tuning (SFT) with LoRA adapters. This method trains only a small portion of the model’s parameters, making it lightweight and efficient. The goal is to teach the model directly from labeled medical QA pairs.
 
 2. In-Context Learning (ICL)
 
