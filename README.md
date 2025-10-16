@@ -22,9 +22,9 @@ We fine-tune LLaMA 3.1 using supervised fine-tuning (SFT) with LoRA adapters. Th
 
 In this setup, the model isn’t trained, it just sees examples directly in the prompt. This tests how well LLaMA 3.1 can learn patterns and reasoning styles from context alone, without updating its weights. 
 
-3. Direct Preference Optimization (DPO)
+**_3. Direct Preference Optimization (DPO)_**
 
-This experiment teaches the model to prefer better-quality answers. We use pairs of responses — one preferred, one not — so the model learns what kind of reasoning and tone are most clinically appropriate.
+DPO helps the model learn to prefer higher-quality answers. Using pairs of good vs. less-good responses, the model adjusts its behavior to align with human-preferred clinical reasoning and tone.
 
 ## Datasets
 
