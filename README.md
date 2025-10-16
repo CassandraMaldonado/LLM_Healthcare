@@ -12,7 +12,7 @@ General LLMs often struggle with biomedical content they sometimes hallucinate, 
 
 ## Experiments
 
-Each experiment uses the same small base model (like LLaMA or GPT-OSS) and a consistent 50-example dataset for fair comparison.
+Each experiment uses the same LLaMA 3.1 base model and a consistent set of 100 medical question–answer pairs for fair comparison.
 
 1. Fine-Tuning
 
