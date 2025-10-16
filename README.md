@@ -18,7 +18,7 @@ Each experiment uses the same LLaMA 3.1 base model and a consistent set of 100 m
 
 We fine-tune LLaMA 3.1 using supervised fine-tuning (SFT) with LoRA adapters. This method trains only a small portion of the model’s parameters, making it lightweight and efficient. The goal is to teach the model directly from labeled medical QA pairs.
 
-2. In-Context Learning (ICL)
+***2. In-Context Learning (ICL)***
 
 In this setup, we don’t train the model at all — we just show it examples directly in the prompt and see how well it generalizes. This test helps us understand how much the model can learn “on the fly” from context alone.
 
