@@ -102,7 +102,7 @@ Use cases include:
 
 - Validating data formatting (prompt/response structure, tokenization) quickly.
 
-Iterating prompt templates and instruction tuning before scaling to 13B.
+- Iterating prompt templates and instruction tuning before scaling to 13B.
 
 Running small-scale inference and sanity checks on hardware that can’t handle the full 13B workflow.
 
