@@ -100,7 +100,7 @@ It covers:
 A quicker, lighter alternative using the 7B-parameter model.
 Use cases include:
 
-Validating data formatting (prompt/response structure, tokenization) quickly.
+- Validating data formatting (prompt/response structure, tokenization) quickly.
 
 Iterating prompt templates and instruction tuning before scaling to 13B.
 
