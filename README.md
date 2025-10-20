@@ -104,7 +104,7 @@ Use cases include:
 
 - Iterating prompt templates and instruction tuning before scaling to 13B.
 
-Running small-scale inference and sanity checks on hardware that can’t handle the full 13B workflow.
+- Running small-scale inference and sanity checks on hardware that can’t handle the full 13B workflow.
 
 ## Summary
 Most general LLMs aren't reliable enough for clinical use they miss nuance, sometimes hallucinate and lack medical context. So for this project, I:
