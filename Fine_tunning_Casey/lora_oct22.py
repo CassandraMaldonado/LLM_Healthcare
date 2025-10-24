@@ -19,7 +19,7 @@ MODEL_REPO = "meta-llama/Llama-3.1-8B-Instruct"
 OUTPUT_DIR = "lora-med-eval-gpuonly"
 USE_CHAT   = True
 
-# Micro-batch + grad accumulation
+# micro-batch and grad accumulation.
 BATCH_SIZE_TRAIN   = 1
 BATCH_SIZE_EVAL    = 1
 GRADIENT_ACC_STEPS = 8
