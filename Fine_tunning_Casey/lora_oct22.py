@@ -27,7 +27,7 @@ GRADIENT_ACC_STEPS = 8
 # context length.
 MAX_SEQ_LEN        = 384
 
-# training hyperparams
+# training hyperparams.
 LR                 = 1e-4
 NUM_EPOCHS         = 3
 RANDOM_SEED        = 42
