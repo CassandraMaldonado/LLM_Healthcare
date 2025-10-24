@@ -24,10 +24,10 @@ BATCH_SIZE_TRAIN   = 1
 BATCH_SIZE_EVAL    = 1
 GRADIENT_ACC_STEPS = 8
 
-# Context length (lower if OOM)
+# context length.
 MAX_SEQ_LEN        = 384
 
-# Training hyperparams
+# training hyperparams
 LR                 = 1e-4
 NUM_EPOCHS         = 3
 RANDOM_SEED        = 42
