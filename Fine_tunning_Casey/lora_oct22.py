@@ -11,9 +11,6 @@ from torch.nn.utils.rnn import pad_sequence
 from transformers import AutoTokenizer, AutoModelForCausalLM, Trainer, TrainingArguments
 from peft import LoraConfig, get_peft_model
 
-# ------------------------
-# Tunables (adjust here if OOM)
-# ------------------------
 MEDQA_PATH    = "medqa_50.json"
 MEDMCQA_PATH  = "medmcqa_50.json"
 PUBMEDQA_PATH = "pubmedqa_50.json"
