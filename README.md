@@ -67,7 +67,7 @@ The baseline experiment used the original **LLaMA 3.1 8B** model without any hea
 | Metric | PubMedQA | MedMCQA | RadQA | Notes |
 |:--|:--:|:--:|:--:|:--|
 | **Accuracy** | 61.4 % | 58.7 % | 55.2 % | The model performs decently on factual tasks but struggles with reasoning depth. |
-| **Precision / Recall** | 0.59 / 0.61 | 0.57 / 0.59 | 0.53 / 0.54 | Indicates surface-level understanding. |
+| **Precision / Recall** | 0.59 / 0.61 | 0.57 / 0.59 | 0.53 / 0.54 | It indicates a surface level understanding. |
 | **Hallucination Rate** | ~14 % | – | – | Frequent unsupported claims in complex prompts. |
 
 ---
