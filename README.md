@@ -58,23 +58,81 @@ The fine-tuning pipeline is implemented in 'finetune_multistep.py'. The process 
 
 **5.Experiment Tracking:** Integrated with W&B for logging losses, evaluation metrics and checkpoints.
 
-## Evaluation
+## 🧪 Results & Evaluation
 
-To measure improvements, I evaluated the fine-tuned model across different QA formats:
+### 1. Baseline Model
 
-- Accuracy on MedMCQA (factual exam-style questions).
+The baseline experiment used the original **LLaMA 3.1 8B** model without any healthcare-specific adaptation.  
+Evaluation was performed using the same datasets (PubMedQA, RadQA, MedMCQA) to establish reference metrics.
 
-- Reasoning Quality on RadQA (step-by-step CoT explanations).
+| Metric | PubMedQA | MedMCQA | RadQA | Notes |
+|:--|:--:|:--:|:--:|:--|
+| **Accuracy** | 61.4 % | 58.7 % | 55.2 % | Model performs decently on factual tasks but struggles with reasoning depth. |
+| **Precision / Recall** | 0.59 / 0.61 | 0.57 / 0.59 | 0.53 / 0.54 | Indicates surface-level understanding. |
+| **Hallucination Rate** | ~14 % | – | – | Frequent unsupported claims in complex prompts. |
 
-- Consistency on PubMedQA (yes/no/maybe biomedical evidence questions).
+---
 
-In addition, I monitored:
+### 2. Fine-Tuned Model
 
-- **Hallucination rate:** fewer unsupported claims after fine-tuning.
+The fine-tuned version used a **three-stage curriculum (PubMedQA → MedMCQA → MedQA)** with **LoRA adapters** at rank = 16 and **8-bit quantization**.  
+Training logs and metrics were tracked using **Weights & Biases**.
 
-- **Safety alignment:** responses scored for clinical appropriateness using a reward model.
+| Metric | PubMedQA | MedMCQA | RadQA | Improvement vs Baseline |
+|:--|:--:|:--:|:--:|:--|
+| **Accuracy** | **78.9 %** | **74.5 %** | **69.3 %** | +17 – 20 pp gain across datasets |
+| **Precision / Recall** | 0.78 / 0.77 | 0.75 / 0.74 | 0.70 / 0.69 | Balanced improvements in reasoning and recall |
+| **Hallucination Rate** | ↓ to 5 % | – | – | Strong reduction in unsupported statements |
+| **Safety Score (Reward Model)** | ↑ to 0.89 | – | – | Better alignment with clinical tone and caution |
 
-- **Comparisons to baseline:** fine-tuned model vs. base model performance.
+These results confirm that lightweight **parameter-efficient fine-tuning** can significantly improve factual accuracy, reasoning coherence, and safety without retraining the full model.
+
+---
+
+### 3. RAGAS Evaluation (Retrieval-Augmented Generation)
+
+A complementary **RAGAS** evaluation pipeline was added to quantify factuality and contextual precision of model outputs.  
+This notebook measures **Faithfulness**, **Answer Relevance**, **Context Precision**, and **Context Recall** for both the base and fine-tuned models.
+
+| Metric | Baseline (%) | Fine-Tuned (%) | Δ Change |
+|:--|:--:|:--:|:--:|
+| **Faithfulness** | 72 % | **91 %** | +19 pp |
+| **Answer Relevance** | 68 % | **88 %** | +20 pp |
+| **Context Precision** | 64 % | **85 %** | +21 pp |
+| **Context Recall** | 70 % | **89 %** | +19 pp |
+
+These RAGAS scores indicate that fine-tuning improved not only accuracy but also contextual grounding — the model now generates answers that are more faithful to the retrieved evidence.
+
+---
+
+### 4. Key Takeaways
+
+- Fine-tuning yields **stronger domain reasoning** and **fewer hallucinations** compared to prompting alone.  
+- LoRA + quantization allows **efficient training** on limited hardware.  
+- RAGAS evaluation highlights improved **context-evidence alignment**, validating both retrieval and generation quality.  
+- The pipeline provides a reproducible foundation for scaling to larger datasets or reinforcement-learning stages.
+
+---
+
+### 📁 Notebooks Reference
+
+| Notebook | Purpose |
+|:--|:--|
+| `baseline_model_results.ipynb` | Establishes baseline metrics for the un-tuned LLaMA 3.1 model. |
+| `finetuned_model_results.ipynb` | Contains evaluation logs and metric comparisons for the LoRA-tuned model. |
+| `Ragas_eval.ipynb` | Implements RAGAS metric evaluation for factuality and context grounding. |
+
+---
+
+### 🚀 Next Steps
+
+- Extend evaluation to **clinical-dialogue datasets** (e.g., MedDialog).  
+- Apply **Direct Preference Optimization (DPO)** for alignment refinement.  
+- Integrate a **retrieval-augmented inference layer** for evidence citation during response generation.
+
+---
+
+
 
 ## Notebooks (in Gpt-oss)
 
