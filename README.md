@@ -71,11 +71,10 @@ The baseline experiment used the original **LLaMA 3.1 8B** model without any hea
 | **Precision / Recall** | 0.59 / 0.61 | 0.57 / 0.59 | 0.53 / 0.54 | It indicates a surface level understanding. |
 | **Hallucination Rate** | ~14 % | – | – | Frequent unsupported claims in complex prompts. |
 
----
 
-**_2. Fine-Tuned Model
+**_2. Fine-Tuned Model_**
 
-The fine-tuned version used a **three-stage curriculum (PubMedQA → MedMCQA → MedQA)** with **LoRA adapters** at rank = 16 and **8-bit quantization**.  
+The fine-tuned version used a three-stage curriculum (PubMedQA -> MedMCQA → MedQA)** with **LoRA adapters** at rank = 16 and **8-bit quantization**.  
 Training logs and metrics were tracked using **Weights & Biases**.
 
 | Metric | PubMedQA | MedMCQA | RadQA | Improvement vs Baseline |
