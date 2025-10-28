@@ -89,7 +89,7 @@ These results confirm that lightweight **parameter-efficient fine-tuning** can s
 
 **_3. RAGAS Evaluation (Retrieval-Augmented Generation)_**
 
-A complementary **RAGAS** evaluation pipeline was added to quantify factuality and contextual precision of model outputs.  
+A complementary RAGAS evaluation pipeline was added to quantify factuality and contextual precision of model outputs.  
 This notebook measures **Faithfulness**, **Answer Relevance**, **Context Precision**, and **Context Recall** for both the base and fine-tuned models.
 
 | Metric | Baseline (%) | Fine-Tuned (%) | Δ Change |
