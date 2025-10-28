@@ -61,7 +61,7 @@ The fine-tuning pipeline is implemented in 'finetune_multistep.py'. The process 
 
 ## Results and Evaluation
 
-_### 1. Baseline Model_
+**_1. Baseline Model_**
 
 The baseline experiment used the original **LLaMA 3.1 8B** model without any healthcare-specific adaptation. The evaluation was performed using the same datasets (PubMedQA, RadQA, MedMCQA) to establish reference metrics.
 
