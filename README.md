@@ -86,7 +86,6 @@ Training logs and metrics were tracked using **Weights & Biases**.
 
 These results confirm that lightweight **parameter-efficient fine-tuning** can significantly improve factual accuracy, reasoning coherence, and safety without retraining the full model.
 
----
 
 ### 3. RAGAS Evaluation (Retrieval-Augmented Generation)
 
