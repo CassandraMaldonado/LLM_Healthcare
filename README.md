@@ -79,7 +79,7 @@ Training logs and metrics were tracked using **Weights & Biases**.
 
 | Metric | PubMedQA | MedMCQA | RadQA | Improvement vs Baseline |
 |:--|:--:|:--:|:--:|:--|
-| Accuracy | 78.9 % | **74.5 %** | **69.3 %** | +17 – 20 pp gain across datasets |
+| Accuracy | 78.9 % | 74.5% | **69.3 %** | +17 – 20 pp gain across datasets |
 | **Precision / Recall** | 0.78 / 0.77 | 0.75 / 0.74 | 0.70 / 0.69 | Balanced improvements in reasoning and recall |
 | **Hallucination Rate** | ↓ to 5 % | – | – | Strong reduction in unsupported statements |
 | **Safety Score (Reward Model)** | ↑ to 0.89 | – | – | Better alignment with clinical tone and caution |
