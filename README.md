@@ -92,7 +92,7 @@ These results confirm that lightweight **parameter-efficient fine-tuning** can s
 A complementary RAGAS evaluation pipeline was added to quantify factuality and contextual precision of model outputs.  
 This notebook measures **Faithfulness**, **Answer Relevance**, **Context Precision**, and **Context Recall** for both the base and fine-tuned models.
 
-| Metric | Baseline (%) | Fine-Tuned (%) | Δ Change |
+| Metric | Baseline(%) | Fine-Tuned(%) | Change |
 |:--|:--:|:--:|:--:|
 | Faithfulness | 72% | 91% | +19 pp |
 | Answer Relevance | 68% | 88% | +20 pp |
