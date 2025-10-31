@@ -74,7 +74,7 @@ The baseline experiment used the original **LLaMA 3.1 8B** model without any hea
 
 **_2. Fine-Tuned Model_**
 
-The fine-tuned version used a three-stage curriculum (PubMedQA -> MedMCQA -> MedQA)** with **LoRA adapters** at rank = 16 and **8-bit quantization**.  
+The fine-tuned version used a three-stage curriculum (PubMedQA -> MedMCQA -> MedQA)** with **LoRA adapters** at rank = 16 and 8-bit quantization.  
 Training logs and metrics were tracked using Weights & Biases.
 
 | Metric | PubMedQA | MedMCQA | RadQA | Improvement vs Baseline |
