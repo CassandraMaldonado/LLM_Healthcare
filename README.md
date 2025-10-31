@@ -84,7 +84,7 @@ Training logs and metrics were tracked using Weights & Biases.
 | Hallucination Rate | decreased to 5 % | – | – | Strong reduction in unsupported statements |
 | Safety Score (Reward Model) | ↑ to 0.89 | – | – | Better alignment with clinical tone and caution |
 
-These results confirm that lightweight parameter-efficient fine-tuning can significantly improve factual accuracy, reasoning coherence, and safety without retraining the full model.
+These results confirm that lightweight parameter-efficient fine-tuning can significantly improve factual accuracy, reasoning coherence and safety without retraining the full model.
 
 
 **_3. RAGAS Evaluation (Retrieval-Augmented Generation)_**
