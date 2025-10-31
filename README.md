@@ -82,7 +82,7 @@ Training logs and metrics were tracked using Weights & Biases.
 | Accuracy | 78.9 % | 74.5% | 69.3% | +17 pp gain across datasets |
 | Precision / Recall | 0.78 / 0.77 | 0.75 / 0.74 | 0.70 / 0.69 | Balanced improvements in reasoning and recall |
 | Hallucination rate | decreased to 5 % | – | – | Strong reduction in unsupported statements |
-| Safety Score (Reward Model) | increased to 0.89 | – | – | Better alignment with clinical tone and caution |
+| Safety score (Reward Model) | increased to 0.89 | – | – | Better alignment with clinical tone and caution |
 
 These results confirm that lightweight parameter-efficient fine-tuning can significantly improve factual accuracy, reasoning coherence and safety without retraining the full model.
 
