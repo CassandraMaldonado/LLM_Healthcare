@@ -87,7 +87,7 @@ Training logs and metrics were tracked using Weights & Biases.
 These results confirm that fine-tuning can significantly improve factual accuracy, reasoning coherence and safety without retraining the full model.
 
 
-**_3. RAGAS Evaluation (Retrieval-Augmented Generation)_**
+**_3. RAGAS Evaluation_**
 
 A complementary RAGAS evaluation pipeline was added to quantify factuality and contextual precision of model outputs.  
 This notebook measures **Faithfulness**, **Answer Relevance**, **Context Precision**, and **Context Recall** for both the base and fine-tuned models.
