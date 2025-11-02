@@ -99,7 +99,7 @@ This notebook measures **Faithfulness**, **Answer Relevance**, **Context Precisi
 | Context Precision | 64% | 85% | +21 pp |
 | Context Recall | 70% | 89% | +19 pp |
 
-These RAGAS scores indicate that fine-tuning improved not only accuracy but also contextual grounding — the model now generates answers that are more faithful to the retrieved evidence.
+These RAGAS scores indicate that fine-tuning improved not only accuracy but also contextual grounding, the model now generates answers that are more faithful to the retrieved evidence.
 
 ### 4. Key Takeaways
 
