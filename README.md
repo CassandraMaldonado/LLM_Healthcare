@@ -93,7 +93,6 @@ A complementary RAGAS evaluation pipeline was added to quantify factuality and c
 This notebook measures **Faithfulness**, **Answer Relevance**, **Context Precision**, and **Context Recall** for both the base and fine-tuned models.
 
 | Metric | Baseline(%) | Fine-Tuned(%) | Change |
-|:--|:--:|:--:|:--:|
 | Faithfulness | 72% | 91% | +19 pp |
 | Answer Relevance | 68% | 88% | +20 pp |
 | Context Precision | 64% | 85% | +21 pp |
