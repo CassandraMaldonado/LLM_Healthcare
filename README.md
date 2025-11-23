@@ -103,7 +103,7 @@ These RAGAS scores indicate that fine-tuning improved not only accuracy but also
 
 **_4. Key Takeaways_**
 
-- Fine-tuning yields **stronger domain reasoning** and **fewer hallucinations** compared to prompting alone.  
+- Fine-tuning yields stronger domain reasoning and **fewer hallucinations** compared to prompting alone.  
 - LoRA + quantization allows **efficient training** on limited hardware.  
 - RAGAS evaluation highlights improved **context-evidence alignment**, validating both retrieval and generation quality.  
 - The pipeline provides a reproducible foundation for scaling to larger datasets or reinforcement-learning stages.
