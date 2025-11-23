@@ -90,7 +90,7 @@ These results confirm that fine-tuning can significantly improve factual accurac
 **_3. RAGAS Evaluation_**
 
 A complementary RAGAS evaluation pipeline was added to quantify factuality and contextual precision of model outputs.  
-This notebook measures **Faithfulness**, **Answer Relevance**, **Context Precision**, and **Context Recall** for both the base and fine-tuned models.
+This notebook measures **Faithfulness**, **Answer Relevance**, **Context Precision** and **Context Recall** for both the base and fine-tuned models.
 
 | Metric | Baseline(%) | Fine-Tuned(%) | Change |
 |:--|:--:|:--:|:--:|
