@@ -101,7 +101,7 @@ This notebook measures **Faithfulness**, **Answer Relevance**, **Context Precisi
 
 These RAGAS scores indicate that fine-tuning improved not only accuracy but also contextual grounding, the model now generates answers that are more faithful to the retrieved evidence.
 
-### 4. Key Takeaways
+**_4. Key Takeaways_**
 
 - Fine-tuning yields **stronger domain reasoning** and **fewer hallucinations** compared to prompting alone.  
 - LoRA + quantization allows **efficient training** on limited hardware.  
