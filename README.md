@@ -118,14 +118,6 @@ These RAGAS scores indicate that fine-tuning improved not only accuracy but also
 
 ---
 
-### 🚀 Next Steps
-
-- Extend evaluation to **clinical-dialogue datasets** (e.g., MedDialog).  
-- Apply **Direct Preference Optimization (DPO)** for alignment refinement.  
-- Integrate a **retrieval-augmented inference layer** for evidence citation during response generation.
-
----
-
 
 
 ## Notebooks (in Gpt-oss)
