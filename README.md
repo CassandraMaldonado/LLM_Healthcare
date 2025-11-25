@@ -110,15 +110,6 @@ These RAGAS scores indicate that fine-tuning improved not only accuracy but also
 
 ### Notebooks Reference
 
-| Notebook | Purpose |
-|:--|:--|
-| `baseline_model_results.ipynb` | Establishes baseline metrics for the un-tuned LLaMA 3.1 model. |
-| `finetuned_model_results.ipynb` | Contains evaluation logs and metric comparisons for the LoRA-tuned model. |
-| `Ragas_eval.ipynb` | Implements RAGAS metric evaluation for factuality and context grounding. |
-
-
-## Notebooks (in Gpt-oss)
-
 These notebooks provide runnable workflows to explore and test the models interactively. They complement the production scripts by giving you a more hands-on way to understand and validate each training stage.
 
 - **LLama_13b.ipynb**
