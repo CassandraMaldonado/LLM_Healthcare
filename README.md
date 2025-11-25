@@ -116,9 +116,6 @@ These RAGAS scores indicate that fine-tuning improved not only accuracy but also
 | `finetuned_model_results.ipynb` | Contains evaluation logs and metric comparisons for the LoRA-tuned model. |
 | `Ragas_eval.ipynb` | Implements RAGAS metric evaluation for factuality and context grounding. |
 
----
-
-
 
 ## Notebooks (in Gpt-oss)
 
