@@ -110,7 +110,7 @@ These RAGAS scores indicate that fine-tuning improved not only accuracy but also
 
 ### Notebooks Reference
 
-These notebooks provide runnable workflows to explore and test the models interactively. They complement the production scripts by giving you a more hands-on way to understand and validate each training stage.
+The notebooks provide runnable workflows to explore and test the models interactively. They complement the production scripts by giving you a more hands-on way to understand and validate each training stage.
 
 - **LLama_13b.ipynb**
   
