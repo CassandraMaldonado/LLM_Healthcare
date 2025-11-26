@@ -6,6 +6,8 @@ This project explores three small experiments to compare different ways of adapt
 
 Instead of training one big model, we’re running smaller, controlled tests using about 100 examples per method. The results will help us decide which strategy is most effective before scaling up for larger experiments.
 
+The LoRA + Memento combination achieved the best overall performance, offering higher factual accuracy, fewer hallucinations, and better cross-domain stability (e.g., radiology reports) compared to all other adaptation methods.
+
 ## Motivation
 
 General LLMs often struggle with biomedical content they sometimes hallucinate, overlook key clinical details or produce unsafe advice. Because training big models requires significant compute power, we’re starting small to figure out which method of tuning LLaMA 3.1 is most effective for healthcare tasks.
