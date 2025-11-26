@@ -32,7 +32,7 @@ Memento is a lightweight, continual-learning method that lets the model retain a
 
 This approach strengthens long-form clinical reasoning, improves stability on multi-step tasks and reduces drift when facing new or more complex inputs (for example, radiology reports or rare conditions). Memento pairs well with LoRA because LoRA injects medical knowledge efficiently, while Memento helps the model stay consistent and grounded across cases.
 
-In our experiments, combining LoRA + Memento produced the most reliable answers overall: improved factual accuracy, fewer hallucinations, and better stability on tasks outside the QA datasets we trained on.
+In our experiments, combining LoRA + Memento produced the most reliable answers overall: improved factual accuracy, fewer hallucinations and better stability on tasks outside the QA datasets we trained on.
 
 
 ## Datasets
