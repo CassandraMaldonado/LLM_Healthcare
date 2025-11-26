@@ -26,6 +26,15 @@ In this setup, the model isn’t trained, it just sees examples directly in the 
 
 DPO helps the model learn to prefer higher-quality answers. Using pairs of good vs. less-good responses, the model adjusts its behavior to align with human-preferred clinical reasoning and tone.
 
+4. Memento (Momentum-Based Fine-Tuning)
+
+Memento is a lightweight, continual-learning method that lets the model retain and reuse helpful reasoning patterns without retraining its full set of weights. Instead of updating the entire model, Memento freezes the backbone and adds a memory module that stores previous reasoning traces. During training, the model receives momentum-based updates that reinforce consistent patterns over time.
+
+This approach strengthens long-form clinical reasoning, improves stability on multi-step tasks, and reduces drift when facing new or more complex inputs (for example, radiology reports or rare conditions). Memento pairs well with LoRA because LoRA injects medical knowledge efficiently, while Memento helps the model stay consistent and grounded across cases.
+
+In our experiments, combining LoRA + Memento produced the most reliable answers overall: improved factual accuracy, fewer hallucinations, and better stability on tasks outside the QA datasets we trained on.
+
+
 ## Datasets
 
 Each dataset contributes something different to the training:
