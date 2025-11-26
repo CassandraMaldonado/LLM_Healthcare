@@ -2,7 +2,9 @@
 
 ## Overview
 
-In addition to fine-tuning, ICL, and DPO, we also tested Memento, a momentum-based method that strengthens the model’s consistency and stability. Instead of retraining the entire model, Memento adds a lightweight memory layer that helps the system retain useful reasoning patterns across cases. This is especially valuable in medical tasks where the model needs to stay focused, avoid drifting into irrelevant details and handle longer clinical notes like radiology reports. When combined with LoRA, Memento provided the most reliable results overall—improving factual accuracy, reducing hallucinations, and offering better generalization to new domains such as X-ray Findings and Impressions.
+In addition to fine-tuning, ICL, and DPO, we also tested Memento, a momentum-based method that strengthens the model’s consistency and stability. Instead of retraining the entire model, Memento adds a lightweight memory layer that helps the system retain useful reasoning patterns across cases. This is especially valuable in medical tasks where the model needs to stay focused, avoid drifting into irrelevant details and handle longer clinical notes like radiology reports. 
+
+When combined with LoRA, Memento provided the most reliable results overall—improving factual accuracy, reducing hallucinations, and offering better generalization to new domains such as X-ray Findings and Impressions.
 
 ## Motivation
 
