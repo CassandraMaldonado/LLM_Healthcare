@@ -2,11 +2,7 @@
 
 ## Overview
 
-This project explores three small experiments to compare different ways of adapting LLaMA 3.1 for medical question answering. The goal is to test and compare fine-tuning, ICL and DPO using a small sample of medical data to see which approach gives the best balance between accuracy, reasoning quality and safety.
-
-Instead of training one big model, we’re running smaller, controlled tests using about 100 examples per method. The results will help us decide which strategy is most effective before scaling up for larger experiments.
-
-The LoRA + Memento combination achieved the best overall performance, offering higher factual accuracy, fewer hallucinations, and better cross-domain stability (e.g., radiology reports) compared to all other adaptation methods.
+In addition to fine-tuning, ICL, and DPO, we also tested Memento, a momentum-based method that strengthens the model’s consistency and stability. Instead of retraining the entire model, Memento adds a lightweight memory layer that helps the system retain useful reasoning patterns across cases. This is especially valuable in medical tasks where the model needs to stay focused, avoid drifting into irrelevant details and handle longer clinical notes like radiology reports. When combined with LoRA, Memento provided the most reliable results overall—improving factual accuracy, reducing hallucinations, and offering better generalization to new domains such as X-ray Findings and Impressions.
 
 ## Motivation
 
