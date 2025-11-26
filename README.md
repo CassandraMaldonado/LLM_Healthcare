@@ -26,7 +26,7 @@ In this setup, the model isn’t trained, it just sees examples directly in the 
 
 DPO helps the model learn to prefer higher-quality answers. Using pairs of good vs. less-good responses, the model adjusts its behavior to align with human-preferred clinical reasoning and tone.
 
-4. Memento (Momentum-Based Fine-Tuning)
+**_4. Memento (Momentum-Based Fine-Tuning)
 
 Memento is a lightweight, continual-learning method that lets the model retain and reuse helpful reasoning patterns without retraining its full set of weights. Instead of updating the entire model, Memento freezes the backbone and adds a memory module that stores previous reasoning traces. During training, the model receives momentum-based updates that reinforce consistent patterns over time.
 
