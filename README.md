@@ -27,7 +27,7 @@ When combined, **LoRA + Memento** produced the most reliable results overall:
 - Hallucinations appear in **30–48%** of benchmark LLM outputs.
 - Healthcare AI market projected to exceed **$300B by 2032**.
 
-Clinical AI must be **fast, accurate, stable, and trustworthy**—not just fluent.
+Clinical AI must be **fast, accurate, stable, and trustworthy**, not just fluent.
 
 ---
 
