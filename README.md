@@ -1,6 +1,6 @@
 # Healthcare-Specialized LLM with Reinforcement Learning
 
-**Evaluating Parameter-Efficient Fine-Tuning (LoRA), Direct Preference Optimization (DPO), In-Context Learning (ICL) and Memory-Augmented Training for Clinical Reliability**
+**Healthcare-Specialized LLM with Parameter-Efficient Fine-Tuning, Preference Alignment and Memory-Augmented Reinforcement Learning**
 
 University of Chicago - MS in Applied Data Science  
 Cassandra Maldonado, Ke Wang, Jiayi Li, Zikai Wang
