@@ -20,6 +20,17 @@ When combined, **LoRA + Memento** produced the most reliable results overall:
 
 ---
 
+## Why This Matters
+
+- Diagnostic errors cause **$20B/year** in preventable harm  
+- Manual clinical QA and documentation cost hospitals **$100K–$150K/year**  
+- Hallucinations appear in **30–48%** of benchmark LLM outputs  
+- Healthcare AI market projected to exceed **$300B by 2032**
+
+Clinical AI must be **fast, accurate, stable, and trustworthy**—not just fluent.
+
+---
+
 ## Motivation
 
 General LLMs often struggle with biomedical content they sometimes hallucinate, overlook key clinical details or produce unsafe advice. Because training big models requires significant compute power, we’re starting small to figure out which method of tuning LLaMA 3.1 is most effective for healthcare tasks.
