@@ -42,11 +42,11 @@ This project evaluates multiple adaptation strategies for improving the clinical
 In this approach, the model is **not trained**. Instead, it receives structured clinical examples directly in the prompt.
 
 **Purpose**
-- Evaluate how much clinical reasoning can be learned from context alone  
-- Serve as a strong zero-training baseline  
+- Evaluate how much clinical reasoning can be learned from context alone.
+- Serve as a strong zero-training baseline.
 
 **Strengths**
-- No additional compute or training required  
+- No additional compute or training required.
 - Easy to deploy  
 
 **Limitations**
