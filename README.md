@@ -9,9 +9,16 @@ Cassandra Maldonado, Ke Wang, Jiayi Li, Zikai Wang
 
 ## Overview
 
-In addition to fine-tuning, ICL, and DPO, we also tested Memento, a momentum-based method that strengthens the model’s consistency and stability. Instead of retraining the entire model, Memento adds a lightweight memory layer that helps the system retain useful reasoning patterns across cases. This is especially valuable in medical tasks where the model needs to stay focused, avoid drifting into irrelevant details and handle longer clinical notes like radiology reports. 
+Clinical decisions are often made under extreme time pressure. A physician may have **90 seconds** to act while a patient’s chart contains **hundreds of pages of notes and imaging reports**. While large language models (LLMs) offer speed and scale, they frequently hallucinate, drift across long contexts or produce unsafe clinical reasoning—making real-world deployment risky.
 
-When combined with LoRA, Memento provided the most reliable results overall—improving factual accuracy, reducing hallucinations, and offering better generalization to new domains such as X-ray Findings and Impressions.
+This project introduces **Clinical Q**, a healthcare-specialized LLM pipeline built on **LLaMA 3.1 (8B)**. We evaluate and combine **parameter-efficient fine-tuning (LoRA)**, **Direct Preference Optimization (DPO)**, **In-Context Learning (ICL)**, and a **memory-augmented method (Memento)** to improve factual accuracy, reasoning stability, and safety—without retraining full model weights.
+
+When combined, **LoRA + Memento** produced the most reliable results overall:
+- Higher factual accuracy  
+- **65% fewer hallucinations**  
+- Stronger generalization to unseen domains such as radiology reports  
+
+---
 
 ## Motivation
 
