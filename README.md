@@ -1,5 +1,12 @@
 # Healthcare-Specialized LLM with Reinforcement Learning
 
+**Evaluating Parameter-Efficient Fine-Tuning (LoRA), Direct Preference Optimization (DPO), In-Context Learning (ICL) and Memory-Augmented Training for Clinical Reliability**
+
+University of Chicago — MS in Applied Data Science  
+Cassandra Maldonado · Ke Wang · Jiayi (Ellie) Li · Zikai Wang
+
+---
+
 ## Overview
 
 In addition to fine-tuning, ICL, and DPO, we also tested Memento, a momentum-based method that strengthens the model’s consistency and stability. Instead of retraining the entire model, Memento adds a lightweight memory layer that helps the system retain useful reasoning patterns across cases. This is especially valuable in medical tasks where the model needs to stay focused, avoid drifting into irrelevant details and handle longer clinical notes like radiology reports. 
