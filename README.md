@@ -31,9 +31,107 @@ Clinical AI must be **fast, accurate, stable, and trustworthy**, not just fluent
 
 ---
 
-## Motivation
+## Methods Evaluated
 
-General LLMs often struggle with biomedical content they sometimes hallucinate, overlook key clinical details or produce unsafe advice. Because training big models requires significant compute power, we’re starting small to figure out which method of tuning LLaMA 3.1 is most effective for healthcare tasks.
+This project evaluates multiple adaptation strategies for improving the clinical reliability of large language models. All methods are tested using the same **LLaMA 3.1 (8B)** base model to ensure fair comparison.
+
+---
+
+### 1. In-Context Learning (ICL)
+
+In this approach, the model is **not trained**. Instead, it receives structured clinical examples directly in the prompt.
+
+**Purpose**
+- Evaluate how much clinical reasoning can be learned from context alone  
+- Serve as a strong zero-training baseline  
+
+**Strengths**
+- No additional compute or training required  
+- Easy to deploy  
+
+**Limitations**
+- Reasoning consistency degrades with long contexts  
+- Higher hallucination rates  
+- Limited generalization  
+
+---
+
+### 2. Supervised Fine-Tuning with LoRA
+
+This method applies **Low-Rank Adaptation (LoRA)** to fine-tune the model using labeled medical QA pairs, updating only a small subset of parameters.
+
+**Purpose**
+- Inject domain-specific medical knowledge efficiently  
+- Improve factual accuracy while keeping compute costs low  
+
+**Key Characteristics**
+- Base model weights frozen  
+- LoRA adapters trained (rank = 16)  
+- 8-bit quantization to reduce memory usage  
+
+**Observed Benefits**
+- Significant accuracy gains across medical benchmarks  
+- Reduced hallucinations  
+- Strong improvements in clinical tone and safety  
+
+---
+
+### 3. Direct Preference Optimization (DPO)
+
+DPO trains the model to prefer higher-quality responses using pairs of clinician-approved versus lower-quality answers.
+
+**Purpose**
+- Align model outputs with clinician-preferred reasoning styles  
+- Reduce overconfidence and unsafe recommendations  
+
+**Key Characteristics**
+- No explicit reward model required  
+- Optimizes preference margins directly  
+- Focuses on response quality and tone  
+
+**Observed Benefits**
+- Improved answer safety and alignment  
+- More cautious clinical reasoning  
+
+---
+
+### 4. Memento (Momentum-Based Memory Augmentation)
+
+Memento is a lightweight, continual-learning method that enhances reasoning stability by introducing a **memory module** on top of the frozen model backbone.
+
+**Purpose**
+- Retain and reuse effective reasoning patterns  
+- Reduce drift across long or complex clinical inputs  
+
+**How It Works**
+- Freezes base model weights  
+- Stores prior reasoning traces in a memory layer  
+- Applies momentum-based updates to reinforce consistent patterns  
+
+**Observed Benefits**
+- Improved long-context stability  
+- Stronger multi-step clinical reasoning  
+- Better generalization to unseen domains (e.g., radiology reports)  
+
+---
+
+### 5. Combined Approach: LoRA + Memento (Clinical Q)
+
+The best-performing configuration combines **LoRA fine-tuning** with **Memento memory augmentation**.
+
+**Why This Works**
+- LoRA efficiently injects medical knowledge  
+- Memento stabilizes reasoning and reduces drift  
+- Together, they deliver high accuracy, fewer hallucinations, and stronger generalization  
+
+**Outcome**
+- Highest overall accuracy across benchmarks  
+- 65% reduction in hallucinations vs. baseline  
+- Strong gains in faithfulness and contextual grounding (RAGAS)  
+
+---
+
+All methods were evaluated using identical datasets and metrics, enabling direct comparison of accuracy, safety, and clinical reliability.
 
 ## Experiments
 
