@@ -47,7 +47,7 @@ LORA_ALPHA         = 16 if ULTRA_LOW_MEM else 32
 LORA_DROPOUT       = 0.0
 LORA_TARGET_MODULES= ["q_proj","v_proj"] if ULTRA_LOW_MEM else ["q_proj","k_proj","v_proj","o_proj","gate_proj","up_proj","down_proj"]
 
-# Environment knobs (safer CUDA allocator)
+# Environment knobs
 os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True,max_split_size_mb:128")
 
 # Simple GPU memory guard
