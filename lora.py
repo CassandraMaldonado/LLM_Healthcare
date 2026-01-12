@@ -50,9 +50,7 @@ LORA_TARGET_MODULES= ["q_proj","v_proj"] if ULTRA_LOW_MEM else ["q_proj","k_proj
 # Environment knobs (safer CUDA allocator)
 os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True,max_split_size_mb:128")
 
-# ------------------------
 # Simple GPU memory guard
-# ------------------------
 def bytes_to_gib(x): return x / (1024**3)
 
 def assert_free_mem(min_gib_required: float):
