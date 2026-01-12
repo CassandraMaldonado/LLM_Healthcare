@@ -77,9 +77,7 @@ if torch.cuda.is_available():
 # If other jobs occupy memory, this will fail early with clear guidance.
 assert_free_mem(min_gib_required=10.0)
 
-# ------------------------
 # Tokenizer
-# ------------------------
 tokenizer = AutoTokenizer.from_pretrained(MODEL_REPO, use_fast=True)
 tokenizer.padding_side = "left"
 if tokenizer.pad_token is None:
