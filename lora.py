@@ -119,9 +119,7 @@ try:
 except TypeError:
     model.gradient_checkpointing_enable()
 
-# ------------------------
 # Data
-# ------------------------
 @dataclass
 class MCItem:
     question: str
