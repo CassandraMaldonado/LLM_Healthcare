@@ -86,9 +86,7 @@ if tokenizer.pad_token is None:
     else:
         tokenizer.add_special_tokens({"pad_token": "[PAD]"})
 
-# ------------------------
-# Model (GPU only, no offload)
-# ------------------------
+# Model
 use_bf16 = torch.cuda.get_device_capability()[0] >= 8  # Ampere+ supports bf16 well
 torch_dtype = torch.bfloat16 if use_bf16 else torch.float16
 
