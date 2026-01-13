@@ -16,7 +16,6 @@ try:
 except Exception:
     print("HF_TOKEN not found in Colab secrets")
 
-# Login if we have a token
 if HF_TOKEN and not USE_OPEN_MODEL:
     from huggingface_hub import login
     login(token=HF_TOKEN)
