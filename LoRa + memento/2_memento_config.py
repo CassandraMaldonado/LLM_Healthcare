@@ -8,7 +8,7 @@ import os
 from google.colab import userdata
 
 # Configuration
-USE_OPEN_MODEL = False  # Set True to skip authentication entirely
+USE_OPEN_MODEL = False
 HF_TOKEN = None
 
 # Try to get token from Colab secrets
