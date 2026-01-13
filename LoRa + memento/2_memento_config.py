@@ -10,7 +10,6 @@ from google.colab import userdata
 USE_OPEN_MODEL = False
 HF_TOKEN = None
 
-# Try to get token from Colab secrets
 try:
     HF_TOKEN = userdata.get('HF_TOKEN')
     print("Found HF_TOKEN in Colab secrets")
