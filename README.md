@@ -98,3 +98,15 @@ The final **Clinical Q** model combines LoRA fine-tuning with Memento memory aug
 - Together they balance accuracy, safety, and generalization  
 
 ---
+
+## Datasets
+
+| Dataset | Purpose |
+|------|------|
+| **PubMedQA** | Evidence-based biomedical reasoning |
+| **MedMCQA** | Broad factual medical knowledge |
+| **MedQA (USMLE)** | Diagnostic reasoning and clinical decision-making |
+
+These datasets jointly evaluate recall, reasoning depth, and safety.
+
+---
