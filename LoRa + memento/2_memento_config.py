@@ -14,9 +14,9 @@ HF_TOKEN = None
 # Try to get token from Colab secrets
 try:
     HF_TOKEN = userdata.get('HF_TOKEN')
-    print("✅ Found HF_TOKEN in Colab secrets")
+    print("Found HF_TOKEN in Colab secrets")
 except Exception:
-    print("⚠️ HF_TOKEN not found in Colab secrets")
+    print("HF_TOKEN not found in Colab secrets")
 
 # Login if we have a token
 if HF_TOKEN and not USE_OPEN_MODEL:
