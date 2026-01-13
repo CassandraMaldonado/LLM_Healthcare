@@ -70,7 +70,6 @@ if torch.cuda.is_available():
 
 @dataclass
 class MementoConfig:
-    """Simplified config for Colab training."""
 
     # Model
     base_model: str = BASE_MODEL
