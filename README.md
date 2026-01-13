@@ -33,250 +33,68 @@ Clinical AI must be **fast, accurate, stable, and trustworthy**, not just fluent
 
 ## Methods Evaluated
 
-This project evaluates multiple adaptation strategies for improving the clinical reliability of large language models. All methods are tested using the same **LLaMA 3.1 (8B)** base model to ensure fair comparison.
+All methods are evaluated using the same **LLaMA 3.1 (8B)** base model, datasets, and metrics to ensure fair comparison.
 
----
+### In-Context Learning (ICL)
 
-### 1. In-Context Learning (ICL)
+The model receives structured clinical examples directly in the prompt, with **no parameter updates**.
 
-In this approach, the model is **not trained**. Instead, it receives structured clinical examples directly in the prompt.
-
-**Purpose**
-- Evaluate how much clinical reasoning can be learned from context alone.
-- Serve as a strong zero-training baseline.
-
-**Strengths**
-- No additional compute or training required.
-- Easy to deploy  
+**Role**
+- Zero-training baseline  
+- Measures reasoning ability from context alone  
 
 **Limitations**
-- Reasoning consistency degrades with long contexts  
+- Performance degrades with longer contexts  
 - Higher hallucination rates  
 - Limited generalization  
 
 ---
 
-### 2. Supervised Fine-Tuning with LoRA
+### Supervised Fine-Tuning with LoRA
 
-This method applies **Low-Rank Adaptation (LoRA)** to fine-tune the model using labeled medical QA pairs, updating only a small subset of parameters.
+LoRA fine-tunes a small set of low-rank adapter weights while keeping the base model frozen.
 
-**Purpose**
-- Inject domain-specific medical knowledge efficiently  
-- Improve factual accuracy while keeping compute costs low  
+**Implementation**
+- LoRA rank = 16  
+- 8-bit quantization for memory efficiency  
+- Curriculum-style training  
 
-**Key Characteristics**
-- Base model weights frozen  
-- LoRA adapters trained (rank = 16)  
-- 8-bit quantization to reduce memory usage  
-
-**Observed Benefits**
-- Significant accuracy gains across medical benchmarks  
-- Reduced hallucinations  
-- Strong improvements in clinical tone and safety  
+**Impact**
+- Large gains in factual accuracy  
+- Substantial hallucination reduction  
+- Improved clinical tone and safety  
 
 ---
 
-### 3. Direct Preference Optimization (DPO)
+### Direct Preference Optimization (DPO)
 
-DPO trains the model to prefer higher-quality responses using pairs of clinician-approved versus lower-quality answers.
+DPO aligns the model with clinician-preferred reasoning using paired high- vs. low-quality responses.
 
-**Purpose**
-- Align model outputs with clinician-preferred reasoning styles  
-- Reduce overconfidence and unsafe recommendations  
-
-**Key Characteristics**
-- No explicit reward model required  
-- Optimizes preference margins directly  
-- Focuses on response quality and tone  
-
-**Observed Benefits**
-- Improved answer safety and alignment  
-- More cautious clinical reasoning  
+**Impact**
+- Improved safety and alignment  
+- Reduced overconfidence  
+- Moderate accuracy improvements  
 
 ---
 
-### 4. Memento (Momentum-Based Memory Augmentation)
+### Memento: Memory-Augmented Learning
 
-Memento is a lightweight, continual-learning method that enhances reasoning stability by introducing a **memory module** on top of the frozen model backbone.
+Memento augments the frozen model with a lightweight memory module that stores and reinforces prior reasoning traces using momentum-based updates.
 
-**Purpose**
-- Retain and reuse effective reasoning patterns  
-- Reduce drift across long or complex clinical inputs  
-
-**How It Works**
-- Freezes base model weights  
-- Stores prior reasoning traces in a memory layer  
-- Applies momentum-based updates to reinforce consistent patterns  
-
-**Observed Benefits**
+**Impact**
 - Improved long-context stability  
-- Stronger multi-step clinical reasoning  
-- Better generalization to unseen domains (e.g., radiology reports)  
+- Stronger multi-step reasoning  
+- Reduced drift across cases  
 
 ---
 
-### 5. Combined Approach: LoRA + Memento (Clinical Q)
+### Clinical Q: LoRA + Memento
 
-The best-performing configuration combines **LoRA fine-tuning** with **Memento memory augmentation**.
+The final **Clinical Q** model combines LoRA fine-tuning with Memento memory augmentation.
 
-**Why This Works**
-- LoRA efficiently injects medical knowledge  
-- Memento stabilizes reasoning and reduces drift  
-- Together, they deliver high accuracy, fewer hallucinations, and stronger generalization  
-
-**Outcome**
-- Highest overall accuracy across benchmarks  
-- 65% reduction in hallucinations vs. baseline  
-- Strong gains in faithfulness and contextual grounding (RAGAS)  
+**Why it works**
+- LoRA injects domain knowledge efficiently  
+- Memento stabilizes reasoning and consistency  
+- Together they balance accuracy, safety, and generalization  
 
 ---
-
-All methods were evaluated using identical datasets and metrics, enabling direct comparison of accuracy, safety, and clinical reliability.
-
-## Experiments
-
-Each experiment uses the same LLaMA 3.1 base model and a consistent set of 100 medical question–answer pairs for fair comparison.
-
-***1. Fine-Tuning***
-
-We fine-tune LLaMA 3.1 using supervised fine-tuning (SFT) with LoRA adapters. This method trains only a small portion of the model’s parameters, making it lightweight and efficient. The goal is to teach the model directly from labeled medical QA pairs.
-
-***2. In-Context Learning (ICL)***
-
-In this setup, the model isn’t trained, it just sees examples directly in the prompt. This tests how well LLaMA 3.1 can learn patterns and reasoning styles from context alone, without updating its weights. 
-
-**_3. Direct Preference Optimization (DPO)_**
-
-DPO helps the model learn to prefer higher-quality answers. Using pairs of good vs. less-good responses, the model adjusts its behavior to align with human-preferred clinical reasoning and tone.
-
-**_4. Memento (Momentum-Based Fine-Tuning)_**
-
-Memento is a lightweight, continual-learning method that lets the model retain and reuse helpful reasoning patterns without retraining its full set of weights. Instead of updating the entire model, Memento freezes the backbone and adds a memory module that stores previous reasoning traces. During training, the model receives momentum-based updates that reinforce consistent patterns over time.
-
-This approach strengthens long-form clinical reasoning, improves stability on multi-step tasks and reduces drift when facing new or more complex inputs (for example, radiology reports or rare conditions). Memento pairs well with LoRA because LoRA injects medical knowledge efficiently, while Memento helps the model stay consistent and grounded across cases.
-
-In our experiments, combining LoRA + Memento produced the most reliable answers overall: improved factual accuracy, fewer hallucinations and better stability on tasks outside the QA datasets we trained on.
-
-
-## Datasets
-
-Each dataset contributes something different to the training:
-
-1. PubMedQA: Biomedical yes/no/maybe questions from PubMed abstracts. Good for evidence-based reasoning.
-
-2. RadQA: Radiology QA with detailed rationales. Helps the model learn step-by-step (chain-of-thought) clinical logic.
-
-3. MedMCQA: A large multiple-choice dataset based on medical exams. Useful for memorization and broad factual knowledge.
-
-Combining these datasets helps balance reasoning, recall, and safety in the final model.
-
-## Fine-Tuning Process
-
-The fine-tuning pipeline is implemented in 'finetune_multistep.py'. The process follows a curriculum-style setup:
-
-**1. Instruction Formatting:** Converted QA datasets into an instruction–response format so the model learns to follow prompts directly.
-
-**2. Stage-Wise Training:**
-
-- _Stage 1:_ Fine-tune on PubMedQA for evidence reasoning.
-
-- _Stage 2:_ Fine-tune on MedMCQA for factual recall.
-
-- _Stage 3:_ Fine-tune on MedQA for comprehensive clinical reasoning.
-
-**3. LoRA Adapters:** Used for parameter-efficient fine-tuning, training only a fraction of model weights.
-
-**4. Quantization:** Trained with 8-bit precision to reduce GPU memory usage and make large models trainable on more modest hardware.
-
-**5.Experiment Tracking:** Integrated with W&B for logging losses, evaluation metrics and checkpoints.
-
-
-## Results and Evaluation
-
-**_1. Baseline Model_**
-
-The baseline experiment used the original **LLaMA 3.1 8B** model without any healthcare-specific adaptation. The evaluation was performed using the same datasets (PubMedQA, RadQA, MedMCQA) to establish reference metrics.
-
-| Metric | PubMedQA | MedMCQA | RadQA | Notes |
-|:--|:--:|:--:|:--:|:--|
-| Accuracy | 61.4% | 58.7% | 55.2% | The model performs decently on factual tasks but struggles with reasoning depth. |
-| Precision / Recall | 0.59 / 0.61 | 0.57 / 0.59 | 0.53 / 0.54 | It indicates a surface level understanding. |
-| Hallucination rate | 14% | – | – | Frequent unsupported claims in complex prompts. |
-
-
-**_2. Fine-Tuned Model_**
-
-The fine-tuned version used a three-stage curriculum (PubMedQA -> MedMCQA -> MedQA) with **LoRA adapters** at rank = 16 and 8-bit quantization.  
-Training logs and metrics were tracked using Weights & Biases.
-
-| Metric | PubMedQA | MedMCQA | RadQA | Improvement vs Baseline |
-|:--|:--:|:--:|:--:|:--|
-| Accuracy | 78.9% | 74.5% | 69.3% | +17 pp gain across datasets. |
-| Precision / Recall | 0.78 / 0.77 | 0.75 / 0.74 | 0.70 / 0.69 | Balanced improvements in reasoning and recall. |
-| Hallucination rate | decreased to 5 % | – | – | Strong reduction in unsupported statements. |
-| Safety score (Reward model) | increased to 0.89 | – | – | Better alignment with clinical tone and caution. |
-
-These results confirm that fine-tuning can significantly improve factual accuracy, reasoning coherence and safety without retraining the full model.
-
-
-**_3. RAGAS Evaluation_**
-
-A complementary RAGAS evaluation pipeline was added to quantify factuality and contextual precision of model outputs.  
-This notebook measures **Faithfulness**, **Answer Relevance**, **Context Precision** and **Context Recall** for both the base and fine-tuned models.
-
-| Metric | Baseline(%) | Fine-Tuned(%) | Change |
-|:--|:--:|:--:|:--:|
-| Faithfulness | 72% | 91% | +19 pp |
-| Answer Relevance | 68% | 88% | +20 pp |
-| Context Precision | 64% | 85% | +21 pp |
-| Context Recall | 70% | 89% | +19 pp |
-
-These RAGAS scores indicate that fine-tuning improved not only accuracy but also contextual grounding, the model now generates answers that are more faithful to the retrieved evidence.
-
-**_4. Key Takeaways_**
-
-- Fine-tuning yields stronger domain reasoning and **fewer hallucinations** compared to prompting alone.  
-- LoRA + quantization allows **efficient training** on limited hardware.  
-- RAGAS evaluation highlights improved **context-evidence alignment**, validating both retrieval and generation quality.  
-- The pipeline provides a reproducible foundation for scaling to larger datasets or reinforcement-learning stages.
-
-### Notebooks Reference
-
-The notebooks provide runnable workflows to explore and test the models interactively. They complement the production scripts by giving you a more hands-on way to understand and validate each training stage.
-
-- **LLama_13b.ipynb**
-  
-A comprehensive fine-tuning walkthrough for the 13B-parameter LLaMA model.
-It covers:
-
-1. Loading a quantized version of the 13B model (8-bit or 4-bit modes).
-
-2. Attaching LoRA adapters to the model, freezing base weights.
-
-3. Sequential fine-tuning stages (PubMedQA, RadQA, MedMCQA) with intermediate checkpointing.
-
-4. Running evaluations after each stage (accuracy, reasoning, safety metrics).
-
-5. Sampling and comparing model outputs across prompts to monitor hallucination or alignment issues.
-
-- **Testing_llama7b.ipynb**
-
-A quicker, lighter alternative using the 7B-parameter model.
-Use cases include:
-
-- Validating data formatting (prompt/response structure, tokenization) quickly.
-
-- Iterating prompt templates and instruction tuning before scaling to 13B.
-
-- Running small-scale inference and sanity checks on hardware that can’t handle the full 13B workflow.
-
-## Summary
-Most general LLMs aren't reliable enough for clinical use they miss nuance, sometimes hallucinate and lack medical context. So for this project, I:
-
-- Fine-tuned a base model (LLaMA) using three healthcare datasets.
-
-- Trained a reward model to score helpfulness and safety.
-
-- Applied reinforcement learning to align responses with expert like answers.
-
-- Evaluated the improvements across different medical QA formats.
