@@ -110,3 +110,19 @@ The final **Clinical Q** model combines LoRA fine-tuning with Memento memory aug
 These datasets jointly evaluate recall, reasoning depth, and safety.
 
 ---
+
+## Training Pipeline
+
+The training workflow is implemented in `finetune_multistep.py` and follows a curriculum-style approach:
+
+1. Instruction–response formatting  
+2. Stage 1: PubMedQA (evidence reasoning)  
+3. Stage 2: MedMCQA (factual recall)  
+4. Stage 3: MedQA (clinical reasoning)  
+
+**Technical details**
+- LoRA adapters  
+- 8-bit quantization  
+- Weights & Biases for experiment tracking  
+
+---
