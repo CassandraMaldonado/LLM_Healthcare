@@ -99,14 +99,11 @@ class MementoConfig:
     use_4bit: bool = True  # Enable for Colab T4/V100
 
 config = MementoConfig()
-print("📋 Configuration loaded")
+print("Configuration loaded")
 
-# ============================================================
-# CELL 5: Memory Bank Implementation
-# ============================================================
+# Memory Bank Implementation
 
 class MementoMemoryBank:
-    """Non-parametric memory bank for storing successful predictions."""
 
     def __init__(self, capacity: int = 2000, top_k: int = 5):
         self.capacity = capacity
