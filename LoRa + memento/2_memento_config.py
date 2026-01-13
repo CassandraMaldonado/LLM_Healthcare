@@ -1,5 +1,4 @@
 !pip install -q torch peft datasets sentence-transformers
-# Force uninstall and reinstall bitsandbytes to ensure the latest version is properly loaded for transformers
 !pip uninstall -y bitsandbytes
 !pip install -q bitsandbytes transformers --upgrade
 !pip install -q pandas openpyxl tqdm accelerate
