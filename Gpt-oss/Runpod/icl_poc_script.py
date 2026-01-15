@@ -1,10 +1,4 @@
-"""
-GPT-OSS In-Context Learning
-
-Two-stage experiment:
-- Stage 1: Full stage1.jsonl (~35k samples)
-- Stage 2: First 10k samples from stage2.jsonl
-"""
+# GPT-OSS In-Context Learning
 
 import json
 import argparse
