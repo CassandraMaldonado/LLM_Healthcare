@@ -15,11 +15,10 @@ import gc
 
 @dataclass
 class POCConfig:
-    """Configuration for proof-of-concept ICL experiment."""
     model_path: str
     backend: str = "unsloth"
     stages: List[str] = field(default_factory=lambda: ["stage1.jsonl", "stage2.jsonl"])
-    subset_size: int = 10000  # For stage 2
+    subset_size: int = 10000
     temperature: float = 0.2
     top_p: float = 0.9
     max_new_tokens: int = 150
