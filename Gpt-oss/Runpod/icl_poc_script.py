@@ -1,6 +1,5 @@
 """
-GPT-OSS In-Context Learning - Proof of Concept Script
-Optimized for A100 40GB with $50-60 budget constraint.
+GPT-OSS In-Context Learning
 
 Two-stage experiment:
 - Stage 1: Full stage1.jsonl (~35k samples)
