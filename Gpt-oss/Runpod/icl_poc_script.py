@@ -23,8 +23,8 @@ class POCConfig:
     top_p: float = 0.9
     max_new_tokens: int = 150
     batch_size: int = 4
-    num_icl_examples: int = 30  # Conservative for 4-bit quant
-    max_prompt_tokens: int = 14000  # Safe for 16K context (leave 2K buffer)
+    num_icl_examples: int = 30
+    max_prompt_tokens: int = 14000
     output_dir: str = "./poc_results"
     max_gpu_hours: float = 40.0  # Budget constraint
     save_every: int = 500
