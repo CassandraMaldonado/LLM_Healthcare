@@ -26,7 +26,7 @@ class POCConfig:
     num_icl_examples: int = 30
     max_prompt_tokens: int = 14000
     output_dir: str = "./poc_results"
-    max_gpu_hours: float = 40.0  # Budget constraint
+    max_gpu_hours: float = 40.0
     save_every: int = 500
     seed: int = 42
     quantization: str = "4bit"  # 4-bit quantization
