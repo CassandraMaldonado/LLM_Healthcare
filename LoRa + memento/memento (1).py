@@ -39,10 +39,8 @@ from peft import PeftModel
 from tqdm import tqdm
 import numpy as np
 
-# ========================
 # Config
-# ========================
-# Datasets
+
 MEDQA_PATH    = "medqa_50.json"
 MEDMCQA_PATH  = "medmcqa_50.json"
 PUBMEDQA_PATH = "pubmedqa_50.json"
