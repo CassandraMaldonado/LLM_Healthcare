@@ -116,9 +116,9 @@ def _read_json_any(path: str) -> Union[dict, list]:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-# ========================
+
 # Loaders
-# ========================
+
 def load_medqa(path: str) -> List[MCItem]:
     raw = _read_json_any(path)
     items: List[MCItem] = []
