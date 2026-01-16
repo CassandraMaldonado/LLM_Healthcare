@@ -72,9 +72,8 @@ CASE_BANK_PATH           = "case_bank.json"  # persisted case bank file
 WARM_SEED_MC_MAX  = 8
 WARM_SEED_YNM_MAX = 8
 
-# ========================
-# Device / dtype
-# ========================
+
+# dtype
 use_bf16 = torch.cuda.is_available() and torch.cuda.get_device_capability(0)[0] >= 8
 torch_dtype = torch.bfloat16 if use_bf16 else torch.float16
 
