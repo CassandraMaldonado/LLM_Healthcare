@@ -45,12 +45,14 @@ MEDQA_PATH    = "medqa_50.json"
 MEDMCQA_PATH  = "medmcqa_50.json"
 PUBMEDQA_PATH = "pubmedqa_50.json"
 
-# Base model and optional LoRA adapter
+# Base model and LoRA adapter.
+
 MODEL_REPO    = "meta-llama/Llama-3.1-8B-Instruct"
 TEST_LORA_ADAPTER = True
 ADAPTER_REPO      = "Easonwangzk/lora-llama31-med-adapter"
 
 # Prompting
+
 USE_CHAT   = True
 DET_SAMPLE = False 
 
