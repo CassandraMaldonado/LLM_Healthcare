@@ -51,8 +51,8 @@ TEST_LORA_ADAPTER = True
 ADAPTER_REPO      = "Easonwangzk/lora-llama31-med-adapter"
 
 # Prompting
-USE_CHAT   = True     # use model's chat template
-DET_SAMPLE = False    # greedy decoding for determinism
+USE_CHAT   = True
+DET_SAMPLE = False 
 
 # ICL
 K_SHOTS_MC  = 2
