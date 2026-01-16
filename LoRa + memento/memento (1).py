@@ -95,9 +95,9 @@ except Exception:
     _VEC = TfidfVectorizer(max_features=4096)
     _USE_EMB = False
 
-# ========================
+
 # Data containers
-# ========================
+
 @dataclass
 class MCItem:
     question: str
