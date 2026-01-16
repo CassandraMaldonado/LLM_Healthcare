@@ -82,10 +82,10 @@ base_model = AutoModelForCausalLM.from_pretrained(
 base_model.eval()
 print(f"[INFO] Model loaded: {MODEL_REPO}")
 
-# ========================
-# Optional retrieval backends for MemoryBank
-# ========================
-# Prefer Sentence-BERT; fallback to TF-IDF if unavailable.
+
+# Retrieval backends for MemoryBank
+
+# Prefer Sentence-BERT and fallback to TF-IDF if unavailable.
 try:
     from sentence_transformers import SentenceTransformer
     _SBERT = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
