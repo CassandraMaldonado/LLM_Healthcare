@@ -10,7 +10,7 @@ parser.add_argument('--templates_dir', default='', help='Directory containing te
 parser.add_argument('--output_dir', default='', help='Directory to store the output')
 args = parser.parse_args()
 
-###################################################### SET FILE PATHS ##################################################################
+# File Paths
 
 templates_file = args.templates_dir
 obesity_file_path = i2b2_file_paths = args.i2b2_dir
