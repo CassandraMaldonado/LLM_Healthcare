@@ -22,7 +22,7 @@ ql_output = os.path.join(args.output_dir,"obesity-ql.csv")
 #print(ql_output)
 qa_json_out = os.path.join(args.output_dir,"obesity-qa.json")
 
-######################################################## CODE #########################################################################
+
 
 def ReadFile():
 
